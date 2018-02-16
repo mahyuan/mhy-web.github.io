@@ -3,16 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-author: MaHuaYuan
-language: 
-timezone:
+title: 马华元的博客 # 标题
+subtitle: 这里是我的学习日志。 # 副标题
+description: 马华元博客，马华元，博客，hexo, mhy, mhyuan, mahuayuan # 关键词
+author: MaHuaYuan 
+language: zh-CN
+timezone: Asia/Shanghai # 时区
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://mhynet.cn
+url: http://mhynet.cn/
+# url: http://mhy-web.gitee.io/mhy-web.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -72,9 +73,37 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+# theme: landscape , next
+theme: BlueLake
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy: master
-  type:
+deploy: 
+  type: git
+  repository: git@github.com:mhy-web/mhy-web.github.io.git # github
+  # repository: https://gitee.com/mhy-web/mhy-web.github.io # 码云
+  name: mhyuan
+  email: dsz9258@163.com
+  branch: master
+  
+# 添加本地搜索
+## 默认本地搜索是用原生JS写的，但还需要HEXO插件创建的JSON数据文件配合。安装插件hexo-generator-json-content来创建JSON数据文件
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: true
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true
+
