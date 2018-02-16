@@ -1,0 +1,7 @@
+{
+  "name": "mhy-web.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:mhy-web/mhy-web.github.io.git",
+  "license": "MIT"
+}
