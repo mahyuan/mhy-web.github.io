@@ -1,12 +1,11 @@
 ---
 title: window对象之navigator
-data: 2018-02-24 11:22:09
+date: 2018-02-24 11:22:09
 category: 技术
 tags: [window，JavaScript]
 ---
 
 从今天开始会陆续学习window对象的属性，今天先学习`window.navigator`。
-
 `window.navigator`返回一个navigator对象的引用,可以用它来查询一些关于运行当前脚本的应用程序的相关信。
 在chrome浏览器中按快捷键`alt + ⌘`打开开发者工具，在console下输入`navigator`、回车，即可打印出`navigator`对象。
 ![](http://wicdn.xiaohongchun.com/xhc-plat/1519441439885_WfktCB4fjm.png)
