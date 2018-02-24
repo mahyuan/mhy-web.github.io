@@ -11,10 +11,9 @@ tags: [window，JavaScript]
 在chrome浏览器中按快捷键`alt + ⌘`打开开发者工具，在console下输入`navigator`、回车，即可打印出`navigator`对象。
 ![](http://wicdn.xiaohongchun.com/xhc-plat/1519441439885_WfktCB4fjm.png)
 
-## 属性
+## 常用属性
 - **navigator.userAgent**
-返回当前浏览器的user agent字符串.
-
+返回当前浏览器的user agent字符串。
 该属性是`navigatior`对象用的最多的，常用于判断客户端类型
 ### 判断浏览器类型
 ```js
@@ -22,7 +21,9 @@ function goPAGE() {
     return (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))
 }
 ```
+>请注意，navigator的信息可以很容易地被用户修改，所以JavaScript读取的值不一定是正确的。很多初学者为了针对不同浏览器编写不同的代码，喜欢用if判断浏览器版本;正确的方法是充分利用JavaScript对不存在属性返回undefined的特性，直接用短路运算符||计算。
 
+判断浏览器类型:
 ```js
 function getExploreName(){
   var userAgent = navigator.userAgent;
@@ -45,13 +46,17 @@ function getExploreName(){
   }
 }
 ```
-
-- **navigator.appCodeName**
-返回当前浏览器的内部“代码”名称,该名称可能是不"正确"的.
 - **navigator.appName**
 返回当前浏览器的正式名称,该名称可能是不"正确"的.
 - **navigator.appVersion**
 返回当前浏览器的版本号,该值可能是不"正确"的.
+- **navigator.language**
+返回一个字符串,表明当前浏览器的语言种类.
+- **navigator.platform**
+返回一个字符串,表明当前所使用的系统平台类型.
+## 不常用属性
+- navigator.appCodeName
+返回当前浏览器的内部“代码”名称,该名称可能是不"正确"的.
 - navigator.buildID 
 返回当前浏览器的构建标识符 (例如: "2006090803").
 - navigator.connection
@@ -62,8 +67,6 @@ function getExploreName(){
 返回用户配置中do-not-track项的值,如果值为"yes",则网站和应用程序不会跟踪用户.
 - navigator.id
 返回 `id` 对象,你可以用它来为自己的网站添加对BrowserID的支持.
-- **navigator.language**
-返回一个字符串,表明当前浏览器的语言种类.
 - navigator.mimeTypes
 返回当前浏览器支持的MIME类型列表.
 - navigator.mozBattery 
@@ -77,8 +80,6 @@ function getExploreName(){
 返回一个布尔值,表明当前浏览器是否正常联网.
 - navigator.oscpu
 返回一个字符串,表明当前所使用的操作系统类型.
-- **navigator.platform**
-返回一个字符串,表明当前所使用的系统平台类型.
 - navigator.plugins
 返回一个包含了浏览器中所有已安装的插件对象的数组.
 - navigator.product 
@@ -93,6 +94,7 @@ function getExploreName(){
 返回当前浏览器的浏览器供应商名称的版本号 (e.g. "6.1").
 - navigator.webkitPointer 
 返回一个Mouse Lock API中的PointerLock对象.
+
 ## 方法
 - navigator.javaEnabled
 表明当前浏览器是否启用了对Java的支持.
