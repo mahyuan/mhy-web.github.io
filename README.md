@@ -95,8 +95,25 @@ hexo d
 ```
 <blockquote class="blockquote-center">优秀的人，不是不合群，而是他们合群的人里面没有你</blockquote>
 ```
-
-
+### 阅读量统计
+阅读量统计使用的是[LeanCloud](https://leancloud.cn/dashboard/applist.html#/apps),
+配置可以参考[这篇教程](http://www.jeyzhang.com/hexo-next-add-post-views.html)。
+```yml
+# add post views
+leancloud_visitors:
+  enable: true
+  app_id:  #你的app_id
+  app_key:  ##你的app_key
+```
+### 评论系统
+查阅了一些评论相关的介绍，最后选用的[来必力](https://livere.com/)。
+[配置方式](http://www.hl10502.com/2017/03/24/hexo-config-livere/)参考自这里。
+评论系统的配置在主题的配置文件_config.yml中，修改livere_uid的配置值为[来必力](http://www.hl10502.com/2017/03/24/hexo-config-livere/livere-get-code.png)获取到的data-uid。
+```yml
+# Support for LiveRe comments system.
+# You can get your uid from https://livere.com/insight/myCode (General web site)
+livere_uid: your uid
+```
 ### 总结： 
 在默认分支hexo上， 博客静态文件使用hexo g -d发布到master分支，源文件push 到hexo 分支， master分支上的文件是hexo 分支自动生成的，不用手动编辑
 
