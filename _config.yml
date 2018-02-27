@@ -110,5 +110,6 @@ jsonContent:
 # add post views 增加阅读量  使用lancloud
 leancloud_visitors:
   enable: true
-  app_id: 72QKoBvyH9pQlyIlDCTEqQdi-gzGzoHsz #**你的app_id**
-  app_key: J4r0oeQgJjCtAI48KADjsgHu # **你的app_key**
+  app_id: 72QKoBvyH9pQlyIlDCTEqQdi-gzGzoHsz
+  app_key: J4r0oeQgJjCtAI48KADjsgHu
+  
