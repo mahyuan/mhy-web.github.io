@@ -1,8 +1,8 @@
 ---
 title: this、原型、继承总结
 date: 2017-10-29 13:16:13
-category: 技术
-tags: [javascript]
+category: javascript
+tags: [javascript, 原型, this, 继承]
 ---
 
 ## this 相关问题

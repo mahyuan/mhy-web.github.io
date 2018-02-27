@@ -1,7 +1,7 @@
 ﻿---
 title: jQuery 之 .extend()方法使用
 date: 2017-08-22 10:36:21
-category: 技术
+category: jQuery
 tags:  [jquery]
 stickie: true
 ---

@@ -1,7 +1,7 @@
 ﻿---
 title:  javascript正则表达式
 date: 2017-08-13 10:36:21
-category:  技术
+category:  javascript
 tags:  [正则表达式, javascript]
 ---
 

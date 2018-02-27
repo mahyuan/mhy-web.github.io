@@ -1,8 +1,8 @@
 ﻿---
 title:  meta标签总结与属性使用介绍
 date: 2017-07-10 10:36:21
-category:  技术
-tags:  [html5, meta]
+category:  html
+tags: [html5, meta]
 ---
 
 英文版w3school中,meta的解释为“元数据”，元数据在Google就有详细解释。

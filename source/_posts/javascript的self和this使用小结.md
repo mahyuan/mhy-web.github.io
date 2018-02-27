@@ -1,7 +1,7 @@
 ---
 title: javascript的self和this使用小结
 date: 2017-09-18 20:12:14
-category: 技术
+category: javascript
 tags: [this, self, javascript]
 ---
 
