@@ -2,7 +2,7 @@
 title: window对象之screen
 date: 2018-02-28 12:49:02
 category: 技术
-tags: [window，JavaScript]
+tags: [window, JavaScript]
 ---
 `window.screen`返回当前window的screen对象。screen对象实现了Screen接口，它是个特殊的对象，返回当前渲染窗口中和屏幕有关的属性。
 

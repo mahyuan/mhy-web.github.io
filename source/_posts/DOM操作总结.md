@@ -2,7 +2,7 @@
 title:  DOM操作总结
 date: 2017-08-02 10:36:21
 category:  技术
-tags:  [DOM, javascript]
+tags: [DOM, javascript]
 ---
 
 文档对象模型 (DOM) 是HTML和XML文档的编程接口。它给文档（结构树）提供了一个结构化的表述并且定义了一种方式—程序可以对结构树进行访问，以改变文档的结构，样式和内容。

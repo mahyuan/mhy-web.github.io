@@ -2,7 +2,7 @@
 title: window对象的属性和方法
 date: 2018-02-25 10:12:19
 category: 技术
-tags: 【window， javascript】
+tags: [window, javascript]
 ---
 
 在JavaScript语言中，DOM( Document Object Model) 是操作文档的API，document 是其的一个对象；而BOM是控制浏览器行为的API，window 是其的一个对象。

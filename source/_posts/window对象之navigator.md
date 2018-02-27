@@ -2,7 +2,7 @@
 title: window对象之navigator
 date: 2018-02-24 11:22:09
 category: 技术
-tags: [window，JavaScript]
+tags: [window, JavaScript]
 ---
 
 从今天开始会陆续学习window对象的属性，今天先学习`window.navigator`。
