@@ -26,6 +26,13 @@ E区归DOM管，是根据开发出来的网站文档（html,css,javascript）等
 
 window 对象表示一个包含DOM文档的窗口，其 document 属性指向窗口中载入的 DOM文档 。使用 document.defaultView 属性可以获取指定文档所在窗口。
 
+### window.screenX 
+返回浏览器左边界到操作系统桌面左边界的水平距离。
 
+### window.screentY
+返回浏览器顶部距离系统桌面顶部的垂直距离。
 
+###  window.scrollbars
+返回滚动条对象，可以检查其可见性。
 
+window.scrollbars 有一个属性
