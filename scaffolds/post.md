@@ -1,6 +1,6 @@
 ---
 title: {{ title }}
 date: {{ date }}
-category: 技术
+category: javascript
 tags: [javascript]
 ---
