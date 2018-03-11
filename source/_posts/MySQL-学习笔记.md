@@ -295,5 +295,8 @@ update tableName set 字段=新值, ... where 条件;
 ```
 
 ## 7.查询
+数据查询使用`select`语句。
+`select 查询项 from tableName [where 条件]`
+
 
 
