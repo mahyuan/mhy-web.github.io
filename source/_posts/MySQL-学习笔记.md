@@ -92,9 +92,11 @@ alter table tableName add 字段名 数据类型 [可选项];
 - 修改字段名称和类型
 有两种方式：`modify`和`change`
 ```sh
-alter table tableName 原字段名 modify 新字段名 [char(20)]
+alter table tableName modify 字段名 [char(20)]
 ```
 可选项中可以是数据类型。
+
+`change`语句除了重新定义字段，还可以重命名字段：
 ```sh
 alter table tableName change 原字段名 新字段名 char(10);
 ```
