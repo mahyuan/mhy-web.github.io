@@ -7,7 +7,7 @@ tags: [window, javascript]
 
 在JavaScript语言中，DOM( Document Object Model) 是操作文档的API，document 是其的一个对象；而BOM是控制浏览器行为的API，window 是其的一个对象。
 
-![](https://pic4.zhimg.com/80/0c273417eb835e0700bbe2ea7ce4c4bb_hd.jpg)
+<img style="width: 80%" src='https://pic4.zhimg.com/80/0c273417eb835e0700bbe2ea7ce4c4bb_hd.jpg'>
 
 [引用知乎上的解释](https://www.zhihu.com/question/33453164),整个窗口中分为几个区域，其中：
 
@@ -22,15 +22,9 @@ E区归DOM管，是根据开发出来的网站文档（html,css,javascript）等
 ## BOM
 >BOM 是浏览器对象模型，window是BOM的一个对象，window对象下有很多子对象，一起控制浏览器的行为。在浏览器中window对想为global对象。
 
-![](https://pic3.zhimg.com/80/v2-818759383c05737f5c626d7cd634e8ee_hd.jpg)
+<img style="width: 80%" src="https://pic3.zhimg.com/80/v2-818759383c05737f5c626d7cd634e8ee_hd.jpg">
 
 window 对象表示一个包含DOM文档的窗口，其 document 属性指向窗口中载入的 DOM文档 。使用 document.defaultView 属性可以获取指定文档所在窗口。
-
-### window.screenX 
-返回浏览器左边界到操作系统桌面左边界的水平距离。
-
-### window.screentY
-返回浏览器顶部距离系统桌面顶部的垂直距离。
 
 ###  window.scrollbars
 返回滚动条对象，可以检查其可见性。
