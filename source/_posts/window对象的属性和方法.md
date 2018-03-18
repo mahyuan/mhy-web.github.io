@@ -19,8 +19,7 @@ E区归DOM管，是根据开发出来的网站文档（html,css,javascript）等
     - B区：浏览器右键菜单。
     - C区：状态栏，document加载时显示http状态等信息。
     - D区：滚动条。
-
-### BOM
+## BOM
 >BOM 是浏览器对象模型，window是BOM的一个对象，window对象下有很多子对象，一起控制浏览器的行为。在浏览器中window对想为global对象。
 
 <img style="width: 80%" src="https://pic3.zhimg.com/80/v2-818759383c05737f5c626d7cd634e8ee_hd.jpg"/>
