@@ -1123,7 +1123,7 @@ hexo-renderer-ejs@^0.3.0:
     ejs "^2.3.4"
     object-assign "^4.0.1"
 
-hexo-renderer-jade@0.3.0:
+hexo-renderer-jade@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/hexo-renderer-jade/-/hexo-renderer-jade-0.3.0.tgz#961d72f2289a87328a4e7efdd3d6389e19e8e996"
   dependencies:
