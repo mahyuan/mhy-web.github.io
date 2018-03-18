@@ -118,6 +118,9 @@ livere_uid: your uid
 ### 总结： 
 在默认分支hexo上， 博客静态文件使用hexo g -d发布到master分支，源文件push 到hexo 分支， master分支上的文件是hexo 分支自动生成的，不用手动编辑
 
+### 新设备上theme同步问题
+因为theme是子项目，所有无法push到本项目的远程仓库下，新建一个仓库单独存储主题项目也不失为一个解决办法，但是很繁琐。
+hexo 3.X 支持在source文件夹下创建_data文件夹，可以存储数据。可以把主题配置文件copy到_data文件加下，如 `next.yml`。这样，在新设备上仅需要根据主题地址git clone下主题仓库，然后把配置文件内容替换为`source/_data/`下对应的配置文件即可。
 
 
 ### [hexo 命令](https://hexo.io/zh-cn/docs/commands.html)
@@ -130,5 +133,6 @@ livere_uid: your uid
 - hexo server #Hexo会监视文件变动并自动更新，无须重启服务器
 - hexo server -s #静态模式
 - hexo server -p 5000 #更改端口
+- hexo server -debug   # 启动debug模式服务器
 - hexo server -i 192.168.1.1 #自定义 IP
 - hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令
