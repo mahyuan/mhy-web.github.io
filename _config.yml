@@ -80,8 +80,8 @@ theme: BlueLake
 ## Docs: https://hexo.io/docs/deployment.html
 deploy: 
   type: git
-  repository: https://github.com/mhy-web/mhy-web.github.io.git   # github
-  # repository: git@github.com:mhy-web/mhy-web.github.io.git # github
+  # repository: https://github.com/mhy-web/mhy-web.github.io.git   # github
+  repository: git@github.com:mhy-web/mhy-web.github.io.git # github
   # repository: https://gitee.com/mhy-web/mhy-web.github.io # 码云
   name: mhyuan
   email: dsz9258@163.com
