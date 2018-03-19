@@ -16,15 +16,12 @@ menu:
   - page: about
     directory: about/
     icon: fa-user
-  # - page: rss
-  #   directory: atom.xml
-  #   icon: fa-rss
+  - page: rss
+    directory: atom.xml
+    icon: fa-rss
 
 # Sidebar
 widgets:
-  - recent_posts
-  - category
-  - tag
   - archive
   - links
   #- weibo
@@ -46,36 +43,25 @@ date_formats:
   tag: "YYYY/MM/DD"
 
 # Extensions
-Plugins:
-  hexo-generator-feed
-  hexo-generator-sitemap
-  hexo-generator-baidu-sitemap
+# Plugins:
+#   hexo-generator-feed
+#   hexo-generator-sitemap
+#   hexo-generator-baidu-sitemap
 
 #Feed Atom
-feed:
-  type: atom
-  path: atom.xml
-  limit: 20
+# feed:
+#   type: atom
+#   path: atom.xml
+#   limit: 20
 
-#sitemap
-sitemap:
-  path: sitemap.xml
-baidusitemap:
-  path: baidusitemap.xml
+# #sitemap
+# sitemap:
+#   path: sitemap.xml
+# baidusitemap:
+#   path: baidusitemap.xml
 
 #Local search
 local_search: true ## Use a javascript-based local search engine, true/false.
-
-#Cmments
-comment:
-  duoshuo: #chaooo ## duoshuo_shortname
-  disqus: ## disqus_shortname
-  livere: MTAyMC8zNDM1OS8xMDg5Ng== ## 来必力(data-uid)
-  uyan: ## 友言(uid)
-  cloudTie: ## 网易云跟帖(productKey)
-  changyan: ## 畅言需在下方配置两个参数，此处不填。
-    appid: ## 畅言(appid)
-    appkey: ##畅言(appkey)
 
 #Share
 baidu_share: true ## 百度分享
@@ -91,7 +77,7 @@ addToAny_share: # AddToAny share. Empty list hides. List items are service name 
 
 # Analytics
 google_analytics: ## Your Google Analytics tracking id, e.g. UA-42025684-2
-baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 1006843030519956000
+baidu_analytics:  ## Your Baidu Analytics tracking id, e.g. 1006843030519956000
 
 # Miscellaneous
 show_category_count: true ## If you want to show the count of categories in the sidebar widget please set the value to true.
@@ -118,6 +104,17 @@ about:
 #   url:
 #   title:
 
+#Cmments 评论
+comment:
+	duoshuo: #chaooo ## duoshuo_shortname
+	disqus: ## disqus_shortname
+	livere: MTAyMC8zNDM1OS8xMDg5Ng== ## 来必力(data-uid)
+	uyan: ## 友言(uid)
+	cloudTie: ## 网易云跟帖(productKey)
+	changyan: ## 畅言需在下方配置两个参数，此处不填。
+		appid: ## 畅言(appid)
+		appkey: ##畅言(appkey)
+
 
 # Links widget. Empty links will hide widget.
 links:
@@ -127,5 +124,6 @@ links:
     url: https://juejin.im/user/59885f075188253d280e45c2
   - title: 博客
     url: http://mhynet.cn
-  - title: 码云
+  - title: 码云(备份)
     url: https://gitee.com/mhy-web
+
