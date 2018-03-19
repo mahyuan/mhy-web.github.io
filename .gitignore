@@ -5,4 +5,3 @@ db.json
 *.log
 .DS_Store
 .deploy*/
-theme/*/.git
