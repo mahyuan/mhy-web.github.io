@@ -1,6 +1,6 @@
 {
   "name": "hexo-site",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "hexo": {
     "version": "3.6.0"
@@ -18,9 +18,10 @@
     "hexo-generator-sitemap": "^1.2.0",
     "hexo-generator-tag": "^0.2.0",
     "hexo-renderer-ejs": "^0.3.0",
-    "hexo-renderer-jade": "^0.3.0",
+    "hexo-renderer-jade": "0.3.0",
     "hexo-renderer-marked": "^0.3.0",
     "hexo-renderer-stylus": "^0.3.3",
-    "hexo-server": "^0.2.0"
+    "hexo-server": "^0.2.0",
+    "pug": "^2.0.0-rc.1"
   }
 }

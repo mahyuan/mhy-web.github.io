@@ -22,9 +22,12 @@ menu:
 
 # Sidebar
 widgets:
+  - recent_posts
+  - category
+  - tag
   - archive
-  - links
   #- weibo
+  - links
 
 # Toc
 toc:
@@ -42,26 +45,41 @@ date_formats:
   post: "MMM DD, YYYY"
   tag: "YYYY/MM/DD"
 
+# Static files
+js: js
+css: css
+
 # Extensions
-# Plugins:
-#   hexo-generator-feed
-#   hexo-generator-sitemap
-#   hexo-generator-baidu-sitemap
+Plugins:
+  hexo-generator-feed
+  hexo-generator-sitemap
+  hexo-generator-baidu-sitemap
 
-#Feed Atom
-# feed:
-#   type: atom
-#   path: atom.xml
-#   limit: 20
+Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
 
-# #sitemap
-# sitemap:
-#   path: sitemap.xml
-# baidusitemap:
-#   path: baidusitemap.xml
+# sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
 
 #Local search
 local_search: true ## Use a javascript-based local search engine, true/false.
+
+#Cmments 评论
+comment:
+	duoshuo: #chaooo ## duoshuo_shortname
+	disqus: ## disqus_shortname
+	livere: MTAyMC8zNDM1OS8xMDg5Ng== ## 来必力(data-uid)
+	uyan: ## 友言(uid)
+	cloudTie: ## 网易云跟帖(productKey)
+	changyan: ## 畅言需在下方配置两个参数，此处不填。
+		appid: ## 畅言(appid)
+		appkey: ##畅言(appkey)
 
 #Share
 baidu_share: true ## 百度分享
@@ -103,17 +121,6 @@ about:
 # - label: facebook
 #   url:
 #   title:
-
-#Cmments 评论
-comment:
-	duoshuo: #chaooo ## duoshuo_shortname
-	disqus: ## disqus_shortname
-	livere: MTAyMC8zNDM1OS8xMDg5Ng== ## 来必力(data-uid)
-	uyan: ## 友言(uid)
-	cloudTie: ## 网易云跟帖(productKey)
-	changyan: ## 畅言需在下方配置两个参数，此处不填。
-		appid: ## 畅言(appid)
-		appkey: ##畅言(appkey)
 
 
 # Links widget. Empty links will hide widget.
