@@ -16,9 +16,9 @@ menu:
   - page: about
     directory: about/
     icon: fa-user
-  # - page: rss
-  #   directory: atom.xml
-  #   icon: fa-rss
+  - page: rss
+    directory: atom.xml
+    icon: fa-rss
 
 # Sidebar
 widgets:

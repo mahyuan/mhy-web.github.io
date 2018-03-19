@@ -5,7 +5,7 @@
 # Site
 title: 马华元的博客 # 标题
 subtitle: 这里是我的学习日志。 # 副标题
-description: 马华元博客，马华元，博客，hexo, mhy, mhyuan, mahuayuan # 关键词
+description: 马华元博客，hexo,  mhyuan, mahuayuan # 关键词
 author: MaHuaYuan 
 language: zh-CN
 timezone: Asia/Shanghai # 时区
@@ -73,8 +73,9 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-# theme: landscape , next
-theme: BlueLake
+# theme: landscape
+# theme: BlueLake
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
