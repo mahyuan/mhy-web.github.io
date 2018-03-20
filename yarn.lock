@@ -1144,12 +1144,12 @@ hexo-generator-sitemap@^1.2.0:
     nunjucks "^2.3.0"
     object-assign "^4.0.1"
 
-hexo-generator-tag@^0.1.0:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/hexo-generator-tag/-/hexo-generator-tag-0.1.2.tgz#ec3c74f0ed2cefaeeafff16bc3815e499518a982"
+hexo-generator-tag@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/hexo-generator-tag/-/hexo-generator-tag-0.2.0.tgz#c5715846bb41e57d9c20c1d66d7db21a1abf7a62"
   dependencies:
     hexo-pagination "0.0.2"
-    object-assign "^2.0.0"
+    object-assign "^4.0.1"
 
 hexo-i18n@^0.2.1:
   version "0.2.1"

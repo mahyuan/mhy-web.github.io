@@ -2,10 +2,10 @@
 ## Site Config Settings ##
 ##########################
 
-# Theme version
+# Theme version 用于自动刷新CDN上的静态文件
 version: 2.0.1
 
-# Header
+# Header 导航菜单
 menu:
   - page: home
     directory: .
@@ -20,21 +20,20 @@ menu:
     directory: atom.xml
     icon: fa-rss
 
-# Sidebar
+# Sidebar 右侧窗口小部件
 widgets:
-  - recent_posts
-  - category
-  - tag
-  - archive
-  #- weibo
-  - links
+  - recent_posts #最新文章
+  - archive #归档
+  - tag #标签
+  #- weibo 
+  - links #友情链接
 
-# Toc
+# Toc 文章目录
 toc:
   enable: true
-  number: false
+  number: true
 
-# Static files
+# Static files 静态文件目录，以便CDN使用
 js: js
 css: css
 
@@ -45,41 +44,26 @@ date_formats:
   post: "MMM DD, YYYY"
   tag: "YYYY/MM/DD"
 
-# Static files
-js: js
-css: css
-
 # Extensions
-Plugins:
-  hexo-generator-feed
-  hexo-generator-sitemap
-  hexo-generator-baidu-sitemap
+# Plugins:
+#   hexo-generator-feed
+#   hexo-generator-sitemap
+#   hexo-generator-baidu-sitemap
 
-Feed Atom
-feed:
-  type: atom
-  path: atom.xml
-  limit: 20
+#Feed Atom
+# feed:
+#   type: atom
+#   path: atom.xml
+#   limit: 20
 
-# sitemap
-sitemap:
-  path: sitemap.xml
-baidusitemap:
-  path: baidusitemap.xml
+# #sitemap
+# sitemap:
+#   path: sitemap.xml
+# baidusitemap:
+#   path: baidusitemap.xml
 
 #Local search
 local_search: true ## Use a javascript-based local search engine, true/false.
-
-#Cmments 评论
-comment:
-	duoshuo: #chaooo ## duoshuo_shortname
-	disqus: ## disqus_shortname
-	livere: MTAyMC8zNDM1OS8xMDg5Ng== ## 来必力(data-uid)
-	uyan: ## 友言(uid)
-	cloudTie: ## 网易云跟帖(productKey)
-	changyan: ## 畅言需在下方配置两个参数，此处不填。
-		appid: ## 畅言(appid)
-		appkey: ##畅言(appkey)
 
 #Share
 baidu_share: true ## 百度分享
@@ -95,7 +79,7 @@ addToAny_share: # AddToAny share. Empty list hides. List items are service name 
 
 # Analytics
 google_analytics: ## Your Google Analytics tracking id, e.g. UA-42025684-2
-baidu_analytics:  ## Your Baidu Analytics tracking id, e.g. 1006843030519956000
+baidu_analytics: W5jYGtw56zjlVrXG  ## Your Baidu Analytics tracking id, e.g. 1006843030519956000
 
 # Miscellaneous
 show_category_count: true ## If you want to show the count of categories in the sidebar widget please set the value to true.
@@ -122,6 +106,16 @@ about:
 #   url:
 #   title:
 
+#Cmments 评论
+comment:
+	duoshuo: #chaooo ## duoshuo_shortname
+	disqus: ## disqus_shortname
+	livere: MTAyMC8zNDM1OS8xMDg5Ng== ## 来必力(data-uid)
+	uyan: ## 友言(uid)
+	cloudTie: ## 网易云跟帖(productKey)
+	changyan: ## 畅言需在下方配置两个参数，此处不填。
+		appid: ## 畅言(appid)
+		appkey: ##畅言(appkey)
 
 # Links widget. Empty links will hide widget.
 links:
