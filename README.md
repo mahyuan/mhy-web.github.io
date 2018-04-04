@@ -15,7 +15,7 @@ hexo g
 hexo d
 ```
 
-启动本地服务器查看博客
+启动本地服务器查看博客
 ```
 hexo server
 ```
@@ -66,8 +66,7 @@ menu:
 说明：当执行hexo g命令时，会自动把图片复制到 public文件的upload_image目录下。
 
 ### 个性化设置
-基本信息
-　　在根目录下的_config.yml文件中，可以修改标题，作者等信息。打开编辑该文件，注意：每一个值的冒号后面都有一个半角空格！
+基本信息在根目录下的_config.yml文件中，可以修改标题，作者等信息。打开编辑该文件，注意：每一个值的冒号后面都有一个半角空格！
 
 未生效的写法：title:nMask的博客
 能生效的写法：title:[空格]nMask的博客
@@ -107,7 +106,7 @@ leancloud_visitors:
   app_key:  ##你的app_key
 ```
 ### 评论系统
-查阅了一些评论相关的介绍, 最后选用的[来必力](https://livere.com/)。
+查阅了一些评论相关的介绍, 最后选用的[来必力](https://livere.com/)。
 [配置方式](http://www.hl10502.com/2017/03/24/hexo-config-livere/)参考自这里。
 评论系统的配置在主题的配置文件_config.yml中，修改livere_uid的配置值为[来必力](http://www.hl10502.com/2017/03/24/hexo-config-livere/livere-get-code.png)获取到的data-uid。
 ```yml
@@ -134,9 +133,9 @@ deploy:
 ### 总结： 
 在默认分支hexo上， 博客静态文件使用hexo g -d发布到master分支，源文件push 到hexo 分支， master分支上的文件是hexo 分支自动生成的，不用手动编辑
 
-### 新设备上`theme`同步问题
-因为`theme`是子项目, 所有无法`push`到本项目的远程仓库下, 新建一个仓库单独存储主题项目也不失为一个解决办法，但是很繁琐。
-`hexo 3.X`支持在`source`文件夹下创建`_data`文件夹, 可以存储数据。可以把主题配置文件`copy`到`_data`文件加下，如 `next.yml`。这样, 在新设备上仅需要根据主题地址`git clone`下主题仓库, 然后把配置文件内容替换为`source/_data/`下对应的配置文件即可。
+### 新设备上`theme`同步问题
+因为`theme`是子项目, 所有无法`push`到本项目的远程仓库下, 新建一个仓库单独存储主题项目也不失为一个解决办法，但是很繁琐。
+`hexo 3.X`支持在`source`文件夹下创建`_data`文件夹, 可以存储数据。可以把主题配置文件`copy`到`_data`文件加下，如`next.yml`。这样, 在新设备上仅需要根据主题地址`git clone`下主题仓库, 然后把配置文件内容替换为`source/_data/`下对应的配置文件即可。
 
 
 ### [hexo 命令](https://hexo.io/zh-cn/docs/commands.html)
