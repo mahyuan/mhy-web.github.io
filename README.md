@@ -115,6 +115,22 @@ leancloud_visitors:
 # You can get your uid from https://livere.com/insight/myCode (General web site)
 livere_uid: your uid
 ```
+### 部署到github 和 gitee
+最开始做的时候只是部署到github, 并且将自己的域名[mhynet.cn](https://mhynet.cn)解析到GitHub上，这样可以通过自己的域名访问博客。后来因为国内访问Github慢的原因将博客备份到了Gitee,但是还有个问题，Gitee并不支持域名解析，所以无法配成成通过自己的域名来访问Gitee。这个问题还在探索中。
+这里要记录的是配置推送到Gitee和Github的方法。
+博客发布`hexo d`同时推送的配置是在根目录:
+```yml
+deploy: 
+	type: git
+	repository: 
+		github: git@github.com:mhy-web/mhy-web.github.io.git # github
+		gitee: git@gitee.com:mhy-web/mhy-web.git # 码云
+	name: mhyuan
+	email: dsz9258@163.com
+	branch: master
+```
+推送hexo分支的源文件需要使用git本身的功能，配置多个remote地址，这里参考了[廖雪峰老师的博客](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00150154460073692d151e784de4d718c67ce836f72c7c4000),但是我的Github的远程库的名字还是使用的是origin，仅仅设置了Gitee的远程库名称。
+
 ### 总结： 
 在默认分支hexo上， 博客静态文件使用hexo g -d发布到master分支，源文件push 到hexo 分支， master分支上的文件是hexo 分支自动生成的，不用手动编辑
 
@@ -136,3 +152,4 @@ livere_uid: your uid
 - hexo server -debug   # 启动debug模式服务器
 - hexo server -i 192.168.1.1 #自定义 IP
 - hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令
+
