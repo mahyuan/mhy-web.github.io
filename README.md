@@ -2,8 +2,8 @@
 
 ### 博客地址：
  http://mhynet.cn
- 
- 
+
+
 ### 操作命令：
 生成静态文件
 ```
@@ -41,18 +41,18 @@ hexo new “我的第一篇文章”，会在source->_posts文件夹内生成一
 
 ### 添加菜单
 进入theme目录，编辑_config_yml文件，找到menu:字段，在该字段下添加一个字段。
-```
+```yml
 menu:
-  home: /
-  about: /about
-  ......
+	home: /
+	about: /about
+	......
 ```
 然后找到lanhuages目录，编辑zh-Hans.yml文件：
 ```
 menu:
-  home: 首页
-  about: 关于作者
-  ......
+	home: 首页
+	about: 关于作者
+	......
 ```
 更新页面显示的中文字符，最后进入theme目录下的Source目录，新增一个about目录，里面写一个index.html文件。
 
@@ -101,9 +101,9 @@ hexo d
 ```yml
 # add post views
 leancloud_visitors:
-  enable: true
-  app_id:  #你的app_id
-  app_key:  ##你的app_key
+	enable: true
+	app_id:  #你的app_id
+	app_key:  ##你的app_key
 ```
 ### 评论系统
 查阅了一些评论相关的介绍, 最后选用的[来必力](https://livere.com/)。
@@ -119,9 +119,9 @@ livere_uid: your uid
 这里要记录的是配置推送到Gitee和Github的方法。
 博客发布`hexo d`同时推送的配置是在根目录:
 ```yml
-deploy: 
+deploy:
 	type: git
-	repository: 
+	repository:
 		github: git@github.com:mhy-web/mhy-web.github.io.git # github
 		gitee: git@gitee.com:mhy-web/mhy-web.git # 码云
 	name: mhyuan
@@ -130,7 +130,7 @@ deploy:
 ```
 推送hexo分支的源文件需要使用git本身的功能，配置多个remote地址，这里参考了[廖雪峰老师的博客](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00150154460073692d151e784de4d718c67ce836f72c7c4000),但是我的Github的远程库的名字还是使用的是origin，仅仅设置了Gitee的远程库名称。
 
-### 总结： 
+### 总结：
 在默认分支hexo上， 博客静态文件使用hexo g -d发布到master分支，源文件push 到hexo 分支， master分支上的文件是hexo 分支自动生成的，不用手动编辑
 
 ### 新设备上`theme`同步问题
