@@ -130,13 +130,13 @@ deploy:
 ```
 推送hexo分支的源文件需要使用git本身的功能，配置多个remote地址，这里参考了[廖雪峰老师的博客](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00150154460073692d151e784de4d718c67ce836f72c7c4000),但是我的Github的远程库的名字还是使用的是origin，仅仅设置了Gitee的远程库名称。
 
-### 总结：
-在默认分支hexo上， 博客静态文件使用hexo g -d发布到master分支，源文件push 到hexo 分支， master分支上的文件是hexo 分支自动生成的，不用手动编辑
+### GitHub Pages自定义域名开启HTTPS
+目前大部分网站都在https协议，GitHub Pages本身是走https协议的，但是如果是自定义域名，则需要使用其他方式来配置，google搜索会发现大部分教程都是使用Cloudflare免费的CDN服务。配置过程参考了[这篇文章](https://razeen.me/post/https-githubpages.html)。
+
 
 ### 新设备上`theme`同步问题
 因为`theme`是子项目, 所有无法`push`到本项目的远程仓库下, 新建一个仓库单独存储主题项目也不失为一个解决办法，但是很繁琐。
 `hexo 3.X`支持在`source`文件夹下创建`_data`文件夹, 可以存储数据。可以把主题配置文件`copy`到`_data`文件加下，如`next.yml`。这样, 在新设备上仅需要根据主题地址`git clone`下主题仓库, 然后把配置文件内容替换为`source/_data/`下对应的配置文件即可。
-
 
 ### [hexo 命令](https://hexo.io/zh-cn/docs/commands.html)
 
@@ -152,3 +152,5 @@ deploy:
 - hexo server -i 192.168.1.1 #自定义 IP
 - hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令
 
+### 总结：
+在默认分支hexo上， 博客静态文件使用hexo g -d发布到master分支，源文件push 到hexo 分支， master分支上的文件是hexo 分支自动生成的，不用手动编辑。
