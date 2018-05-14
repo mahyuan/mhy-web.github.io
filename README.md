@@ -137,6 +137,7 @@ deploy:
 ### 新设备上`theme`同步问题
 因为`theme`是子项目, 所有无法`push`到本项目的远程仓库下, 新建一个仓库单独存储主题项目也不失为一个解决办法，但是很繁琐。
 `hexo 3.X`支持在`source`文件夹下创建`_data`文件夹, 可以存储数据。可以把主题配置文件`copy`到`_data`文件加下，如`next.yml`。这样, 在新设备上仅需要根据主题地址`git clone`下主题仓库, 然后把配置文件内容替换为`source/_data/`下对应的配置文件即可。
+还有百度搜索、谷歌搜索的文件，之前会保存在`source/_data/`文件夹内，换了设备后复制到主题目录下的`source`文件夹内，这样每次`hexo g`的时候会自动生成。
 
 ### [hexo 命令](https://hexo.io/zh-cn/docs/commands.html)
 
