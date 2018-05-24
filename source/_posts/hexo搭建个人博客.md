@@ -4,7 +4,7 @@ date: 2018-5-24 #文章生成时间，一般不改，当然也可以任意修改
 categories: 博客 #分类
 tags: [hexo, github] #文章标签，可空，多标签请用格式，注意:后面有个空格
 ---
-## 1. 前言
+## 前言
 最开始搭建部分参考了[这篇文章](http://blog.liuxianan.com/build-blog-website-by-hexo-github.html)，后面又新增了评论、页面访问量、https服务、主题配置、多终端配置、百度和谷歌搜索、SEO优化等部分，搜集了很多资料，可能某些部分不是很详细但是比较全面。
 <!-- more -->
 使用github pages服务搭建博客的好处有：
@@ -15,7 +15,7 @@ tags: [hexo, github] #文章标签，可空，多标签请用格式，注意:后
 >- 博客内容可以轻松打包、转移、发布到其它平台；
 >- 等等；
 
-### 1.1. 准备工作
+### 准备工作
 
 在开始一切之前，你必须已经：
 
@@ -30,9 +30,9 @@ tags: [hexo, github] #文章标签，可空，多标签请用格式，注意:后
 - git@1.9.2
 - hexo@3.2.2
 
-## 2. 搭建github博客
+## 搭建github博客
 
-### 2.1. 创建仓库
+### 创建仓库
 
 新建一个名为`你的用户名.github.io`的仓库，比如说，如果你的github用户名是test，那么你就新建`test.github.io`的仓库（必须是你的用户名，其它名称无效），将来你的网站访问地址就是 - http://test.github.io 了，是不是很方便？
 
@@ -45,7 +45,7 @@ tags: [hexo, github] #文章标签，可空，多标签请用格式，注意:后
 >- 仓库创建成功不会立即生效，需要过一段时间，大概10-30分钟，或者更久，我的等了半个小时才生效；
 >- 创建成功后，默认会在你这个仓库里生成一些示例页面，以后你的网站所有代码都是放在这个仓库里啦。
 
-### 2.2. 绑定域名
+### 绑定域名
 
 当然，你不绑定域名肯定也是可以的，就用默认的 `xxx.github.io `来访问，如果你想更个性一点，想拥有一个属于自己的域名，那也是OK的。
 
@@ -64,7 +64,7 @@ tags: [hexo, github] #文章标签，可空，多标签请用格式，注意:后
 >- 如果你填写的是其它子域名，比如 abc.mygit.me，那么访问 http://abc.mygit.me 没问题，但是访问 http://mygit.me ，不会自动跳转到 >- http://abc.mygit.me
 >- 另外说一句，在你绑定了新域名之后，原来的你的用户名.github.io并没有失效，而是会自动跳转到你的新域名。
 
-## 3. 配置SSH key
+## 配置SSH key
 
 为什么要配置这个呢？因为你提交代码肯定要拥有你的github权限才可以，但是直接使用用户名和密码太不安全了，所以我们使用ssh key来解决本地和服务器的连接问题。
 ```
@@ -80,7 +80,7 @@ ssh-keygen -t rsa -C "邮件地址"
 
 将刚复制的内容粘贴到key那里，title随便填，保存。
 
-### 3.1. 测试是否成功
+### 测试是否成功
 ```
 $ ssh -T git@github.com # 注意邮箱地址不用改
 ```
@@ -97,20 +97,20 @@ $ git config --global user.email  "xxx@qq.com"// 填写你的github注册邮箱
 ```
 具体这个配置是干嘛的我没仔细深究。
 
-## 4. 使用hexo写博客
+## 使用hexo写博客
 
-### 4.1. hexo简介
+### hexo简介
 
 Hexo是一个简单、快速、强大的基于 Github Pages 的博客发布工具，支持Markdown格式，有众多优秀插件和主题。
 
 官网： http://hexo.io
 github: https://github.com/hexojs/hexo
 
-### 4.2. 原理
+### 原理
 
 由于github pages存放的都是静态文件，博客存放的不只是文章内容，还有文章列表、分类、标签、翻页等动态内容，假如每次写完一篇文章都要手动更新博文目录和相关链接信息，相信谁都会疯掉，所以hexo所做的就是将这些md文件都放在本地，每次写完文章后调用写好的命令来批量完成相关页面的生成，然后再将有改动的页面提交到github。
 
-### 4.3. 注意事项
+### 注意事项
 
 安装之前先来说几个注意事项：
 
@@ -118,11 +118,11 @@ github: https://github.com/hexojs/hexo
 >- hexo不同版本差别比较大，网上很多文章的配置信息都是基于2.x的，所以注意不要被误导；
 >- hexo有2种_config.yml文件，一个是根目录下的全局的_config.yml，一个是各个theme下的；
 
-### 4.4. 安装
+### 安装
 ```
 $ npm install -g hexo
 ```
-### 4.5. 初始化
+### 初始化
 
 在电脑的某个地方新建一个名为hexo的文件夹（名字可以随便取），比如我的是`F:\Workspaces\hexo`，由于这个文件夹将来就作为你存放代码的地方，所以最好不要随便放。
 ```
@@ -149,7 +149,7 @@ http://blog.liuxianan.com/windows-port-bind.html
 
 ![](http://image.liuxianan.com/201608/20160818_132443_202_6848.png)
 
-### 4.6. 修改主题
+### 修改主题
 
 既然默认主题很丑，那我们别的不做，首先来替换一个好看点的主题。这是 官方主题。
 
@@ -168,11 +168,11 @@ $ git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia
 
 如果出现一些莫名其妙的问题，可以先执行hexo clean来清理一下public的内容，然后再来重新生成和发布。
 
-### 4.7. 上传之前
+### 上传之前
 
 在上传代码到github之前，一定要记得先把你以前所有代码下载下来（虽然github有版本管理，但备份一下总是好的），因为从hexo提交代码时会把你以前的所有代码都删掉。
 
-### 4.8. 上传到github
+### 上传到github
 
 如果你一切都配置好了，发布上传很容易，一句hexo d就搞定，当然关键还是你要把所有东西配置好。
 
@@ -208,7 +208,7 @@ npm install hexo-deployer-git --save
 
 ![](http://image.liuxianan.com/201608/20160818_140441_769_5024.png)
 
-### 4.9. 保留CNAME、README.md等文件
+### 保留CNAME、README.md等文件
 
 提交之后网页上一看，发现以前其它代码都没了，此时不要慌，一些非md文件可以把他们放到source文件夹下，这里的所有文件都会原样复制（除了md文件）到public目录的：
 
@@ -216,7 +216,7 @@ npm install hexo-deployer-git --save
 
 由于hexo默认会把所有md文件都转换成html，包括README.md，所有需要每次生成之后、上传之前，手动将README.md复制到public目录，并删除README.html。
 
-### 4.10. 常用hexo命令
+### 常用hexo命令
 
 常见命令
 ```
@@ -240,13 +240,13 @@ hexo d == hexo deploy
 hexo s -g #生成并本地预览
 hexo d -g #生成并上传
 ```
-### 4.11. _config.yml
+###  _config.yml
 
 这里面都是一些全局配置，每个参数的意思都比较简单明了，所以就不作详细介绍了。
 
 需要特别注意的地方是，冒号后面必须有一个空格，否则可能会出问题。
 
-### 4.12. 写博客
+### 写博客
 
 定位到我们的hexo根目录，执行命令：
 ```
@@ -281,11 +281,7 @@ hexo new page "my-second-blog"
 
 最终部署时生成：hexo\public\my-second-blog\index.html，但是它不会作为文章出现在博文目录。
 
-### 4.12.1. 写博客工具
-
-那么用什么工具写博客呢？ 我用的是 **Cmd Markdown 编辑阅读器**, 使用markdown还是很方便的。
-
-### 4.12.2. 如何让博文列表不显示全部内容
+### 如何让博文列表不显示全部内容
 
 默认情况下，生成的博文目录会显示全部的文章内容，如何设置文章摘要的长度呢？
 
@@ -293,23 +289,14 @@ hexo new page "my-second-blog"
 
 ![](http://image.liuxianan.com/201608/20160823_184633_653_1893.png)
 
-## 5. 最终效果：
+## 最终效果：
 
 可以访问我的git博客来查看效果： http://mhynet.cn
 
 不过呢，其实这个博客我只是拿来玩一玩的，没打算真的把它当博客，因为我已经有一个自己的博客了，哈哈！正因如此，本文仅限入门学习，关于hexo搭建个人博客的更高级玩法大家可以另找教程。
 
-## 6. 参考
-
-http://www.cnblogs.com/zhcncn/p/4097881.html
-
-http://www.jianshu.com/p/05289a4bc8b2
-
-本文摘自 http://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html
-
-
-## 7. 后期优化
-### 7.1 阅读量统计
+## 后期优化
+### 阅读量统计
 阅读量统计使用的是[LeanCloud](https://leancloud.cn/dashboard/applist.html#/apps),
 配置可以参考[这篇教程](http://www.jeyzhang.com/hexo-next-add-post-views.html)。
 ```yml
@@ -319,7 +306,7 @@ leancloud_visitors:
   app_id:  #你的app_id
   app_key:  ##你的app_key
 ```
-### 7.2评论系统
+### 评论系统
 查阅了一些评论相关的介绍, 最后选用的[来必力](https://livere.com/)。
 [配置方式](http://www.hl10502.com/2017/03/24/hexo-config-livere/)参考自这里。
 评论系统的配置在主题的配置文件_config.yml中，修改livere_uid的配置值为[来必力](http://www.hl10502.com/2017/03/24/hexo-config-livere/livere-get-code.png)获取到的data-uid。
@@ -328,7 +315,7 @@ leancloud_visitors:
 # You can get your uid from https://livere.com/insight/myCode (General web site)
 livere_uid: your uid
 ```
-### 7.2 部署到github 和 gitee
+### 部署到github 和 gitee
 最开始做的时候只是部署到github, 并且将自己的域名[mhynet.cn](https://mhynet.cn)解析到GitHub上，这样可以通过自己的域名访问博客。后来因为国内访问Github慢的原因将博客备份到了Gitee,但是还有个问题，Gitee并不支持域名解析，所以无法配成成通过自己的域名来访问Gitee。这个问题还在探索中。
 这里要记录的是配置推送到Gitee和Github的方法。
 博客发布`hexo d`同时推送的配置是在根目录:
@@ -367,3 +354,11 @@ google推送和baidu推送需要的两个文件备份在项目的`source/_data`�
 
 ### SEO优化
 SEO优化参考了[这篇文章](https://juejin.im/post/590b451a0ce46300588c43a0), 简化了文件URL层级结构。
+
+
+## 参考
+
+http://www.cnblogs.com/zhcncn/p/4097881.html
+http://www.jianshu.com/p/05289a4bc8b2
+http://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html
+
