@@ -1,0 +1,16 @@
+//- baidu 自动推送需要给每个页面的body节点加入下面代码
+//- BlueLake theme 是把这段代码加到了 themes/BlueLake/layout/_partial/after_footer.jade 中
+script(type="text/javascript" async).
+  (function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+  		bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  	}
+  	else {
+  		bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  	}
+  	var s = document.getElementsByTagName("script")[0];
+  	s.parentNode.insertBefore(bp, s);
+  })();
+

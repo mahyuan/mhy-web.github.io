@@ -3,7 +3,6 @@ title: 使用hexo+github搭建免费个人博客 #文章页面上的显示名称
 date: 2017-9-10 #文章生成时间，一般不改，当然也可以任意修改
 categories: 博客 #分类
 tags: [hexo, github] #文章标签，可空，多标签请用格式，注意:后面有个空格
-description:  #附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面
 ---
 ## 1. 前言
 体验更加排版请访问原文链接：http://blog.liuxianan.com/build-blog-website-by-hexo-github.html
@@ -185,25 +184,25 @@ $ git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia
 其次，配置_config.yml中有关deploy的部分：
 
 正确写法：
-```
+```yml
 deploy:
   type: git
   repository: git@github.com:liuxianan/liuxianan.github.io.git
   branch: master
   ```
 错误写法：
-```
+```yml
 deploy:
   type: github
   repository: https://github.com/liuxianan/liuxianan.github.io.git
   branch: master
   ```
 后面一种写法是hexo2.x的写法，现在已经不行了，无论是哪种写法，此时直接执行hexo d的话一般会报如下错误：
-```
+```yml
 Deployer not found: github 或者 Deployer not found: git
 ```
 原因是还需要安装一个插件：
-```
+```yml
 npm install hexo-deployer-git --save
 ```
 其它命令不确定，部署这个命令一定要用git bash，否则会提示Permission denied (publickey).
@@ -264,7 +263,7 @@ hexo会帮我们在_posts下生成相关md文件
 当然你也可以直接自己新建md文件，用这个命令的好处是帮我们自动生成了时间。
 
 一般完整格式如下：
-```
+```yml
 ---
 title: postName #文章页面上的显示名称，一般是中文
 date: 2013-12-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
@@ -312,3 +311,62 @@ http://www.jianshu.com/p/05289a4bc8b2
 本文摘自 http://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html
 
 
+## 7. 后期优化
+### 7.1 阅读量统计
+阅读量统计使用的是[LeanCloud](https://leancloud.cn/dashboard/applist.html#/apps),
+配置可以参考[这篇教程](http://www.jeyzhang.com/hexo-next-add-post-views.html)。
+```yml
+# add post views
+leancloud_visitors:
+  enable: true
+  app_id:  #你的app_id
+  app_key:  ##你的app_key
+```
+### 7.2评论系统
+查阅了一些评论相关的介绍, 最后选用的[来必力](https://livere.com/)。
+[配置方式](http://www.hl10502.com/2017/03/24/hexo-config-livere/)参考自这里。
+评论系统的配置在主题的配置文件_config.yml中，修改livere_uid的配置值为[来必力](http://www.hl10502.com/2017/03/24/hexo-config-livere/livere-get-code.png)获取到的data-uid。
+```yml
+# Support for LiveRe comments system.
+# You can get your uid from https://livere.com/insight/myCode (General web site)
+livere_uid: your uid
+```
+### 7.2 部署到github 和 gitee
+最开始做的时候只是部署到github, 并且将自己的域名[mhynet.cn](https://mhynet.cn)解析到GitHub上，这样可以通过自己的域名访问博客。后来因为国内访问Github慢的原因将博客备份到了Gitee,但是还有个问题，Gitee并不支持域名解析，所以无法配成成通过自己的域名来访问Gitee。这个问题还在探索中。
+这里要记录的是配置推送到Gitee和Github的方法。
+博客发布`hexo d`同时推送的配置是在根目录:
+```yml
+deploy:
+  type: git
+  repository:
+    github:  # github
+    gitee:  # 码云
+  name: mhyuan
+  email: dsz9258@163.com
+  branch: master
+```
+推送hexo分支的源文件需要使用git本身的功能，配置多个remote地址，这里参考了[廖雪峰老师的博客](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00150154460073692d151e784de4d718c67ce836f72c7c4000),但是我的Github的远程库的名字还是使用的是origin，仅仅设置了Gitee的远程库名称。
+
+### GitHub Pages自定义域名开启HTTPS
+目前大部分网站都在https协议，GitHub Pages本身是走https协议的，但是如果是自定义域名，则需要使用其他方式来配置，google搜索会发现大部分教程都是使用Cloudflare免费的CDN服务。配置过程参考了[这篇文章](https://razeen.me/post/https-githubpages.html)。
+
+这里有一个问题后期需要优化一下，站内的图片有有一些是直接在网上复制的链接，可能不支持https，显示会出现问题。所以后期还有一项可以优化，使用自己的图床，现在比较主流的是七牛云，这样可以保证图片正常显示。
+
+### 新设备上`theme`同步问题
+因为`theme`是子项目, 所有无法`push`到本项目的远程仓库下, 新建一个仓库单独存储主题项目也不失为一个解决办法，但是很繁琐。
+`hexo 3.X`支持在`source`文件夹下创建`_data`文件夹, 可以存储数据。可以把主题配置文件`copy`到`_data`文件加下，如`next.yml`。这样, 在新设备上仅需要根据主题地址`git clone`下主题仓库, 然后把配置文件内容替换为`source/_data/`下对应的配置文件即可。
+还有百度搜索、谷歌搜索的文件，之前会保存在`source/_data/`文件夹内，换了设备后复制到主题目录下的`source`文件夹内，这样每次`hexo g`的时候会自动生成。
+
+注：配置忽略项
+```yml
+skip_render: 
+	- _test/*  # 两个 ** 表示该目录的所有下级目录, 但是两个**会报错，可能是主题里面的配置没有兼容
+	- _data/*
+```
+
+### baidu搜索和Google搜索
+相关配置教程可有在google搜索，有很多讲的很详细的文章。
+google推送和baidu推送需要的两个文件备份在项目的`source/_data`文件夹（改文件夹内的文件不会编译，可当做仓库）下，新设备上复制到主题文件夹的`source`文件夹下(项目根目录的文件夹下会编译，主题目录的`source`下不会编译)。
+
+### SEO优化
+SEO优化参考了[这篇文章](https://juejin.im/post/590b451a0ce46300588c43a0), 简化了文件URL层级结构。
