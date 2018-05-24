@@ -139,9 +139,26 @@ deploy:
 `hexo 3.X`支持在`source`文件夹下创建`_data`文件夹, 可以存储数据。可以把主题配置文件`copy`到`_data`文件加下，如`next.yml`。这样, 在新设备上仅需要根据主题地址`git clone`下主题仓库, 然后把配置文件内容替换为`source/_data/`下对应的配置文件即可。
 还有百度搜索、谷歌搜索的文件，之前会保存在`source/_data/`文件夹内，换了设备后复制到主题目录下的`source`文件夹内，这样每次`hexo g`的时候会自动生成。
 
-### [hexo 命令](https://hexo.io/zh-cn/docs/commands.html)
+注：配置忽略项
+```yml
+skip_render: 
+	- _test/*  # 两个 ** 表示该目录的所有下级目录, 但是两个**会报错，可能是主题里面的配置没有兼容
+	- _data/*
+```
 
-**命令简写**
+### baidu搜索和Google搜索
+相关配置教程可有在google搜索，有很多讲的很详细的文章。
+google推送和baidu推送需要的两个文件备份在项目的`source/_data`文件夹（改文件夹内的文件不会编译，可当做仓库）下，新设备上复制到主题文件夹的`source`文件夹下(项目根目录的文件夹下会编译，主题目录的`source`下不会编译)。
+
+### SEO优化
+SEO优化参考了[这篇文章](https://juejin.im/post/590b451a0ce46300588c43a0), 简化了文件URL层级结构。
+
+
+### 总结：
+在默认分支hexo上， 博客静态文件使用hexo g -d发布到master分支，源文件push 到hexo 分支， master分支上的文件是hexo 分支自动生成的，不用手动编辑。
+
+### [hexo 命令](https://hexo.io/zh-cn/docs/commands.html)
+**常用命令**
 - hexo n "我的博客" == hexo new "我的博客" #新建文章
 - hexo g == hexo generate #生成
 - hexo s == hexo server #启动服务预览
@@ -152,6 +169,3 @@ deploy:
 - hexo server -debug   # 启动debug模式服务器
 - hexo server -i 192.168.1.1 #自定义 IP
 - hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令
-
-### 总结：
-在默认分支hexo上， 博客静态文件使用hexo g -d发布到master分支，源文件push 到hexo 分支， master分支上的文件是hexo 分支自动生成的，不用手动编辑。
