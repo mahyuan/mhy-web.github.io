@@ -4,8 +4,8 @@ let uglify = require('gulp-uglify');
 let htmlmin = require('gulp-htmlmin');
 let htmlclean = require('gulp-htmlclean');
 let imagemin = require('gulp-imagemin');
-let clean = require('gulp-clean');
-let shell = require('gulp-shell');
+// let clean = require('gulp-clean');
+// let shell = require('gulp-shell');
 
 gulp.task('html', function() {
 	let options = {
