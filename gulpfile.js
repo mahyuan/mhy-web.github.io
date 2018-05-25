@@ -13,12 +13,12 @@ gulp.task('html', function() {
         collapseWhitespace: true, //压缩HTML
         collapseBooleanAttributes: true, //省略布尔属性的值 <input checked="true"/> ==> <input />
         removeEmptyAttributes: true, //删除所有空格作属性值 <input id="" /> ==> <input />
-        //removeScriptTypeAttributes: false, //删除<script>的type="text/javascript"
-        //removeStyleLinkTypeAttributes: true, //删除<style>和<link>的type="text/css"
+        removeScriptTypeAttributes: false, //删除<script>的type="text/javascript"
+        removeStyleLinkTypeAttributes: true, //删除<style>和<link>的type="text/css"
         minifyJS: true, //压缩页面JS
         minifyCSS: true //压缩页面CSS
     };
-	return gulp.src('./public/**/*.html')
+	gulp.src('./public/**/*.html')
 		.pipe(htmlclean())
 		.pipe(htmlmin(options))
 		.on('error', function(err) {
@@ -29,7 +29,7 @@ gulp.task('html', function() {
 });
 
 gulp.task('js', function() {
-	return gulp.src('./public/**/*.js')
+	gulp.src('./public/**/*.js')
 		.pipe(uglify())
 		.pipe(gulp.dest('./public'));
 });
@@ -43,7 +43,7 @@ gulp.task('images', function() {
 });
 
 gulp.task('css', function() {
-	return gulp.src('./public/**/*.css')
+	gulp.src('./public/**/*.css')
 		.pipe(minifycss())
 		.pipe(gulp.dest('./public'))
 });
@@ -51,7 +51,7 @@ gulp.task('css', function() {
 // CSS 文件已压缩，需要压缩的有html、js和图片
 const taskList = [
 	'html',
-	// 'css',
+	'css',
 	'js',
 	'images'
 	];
