@@ -8,8 +8,18 @@ date: 2018-03-03 11:35:30
 ---
 MySQL数据库学习笔记。
 MySQL环境搭建可查阅资料，此处不细说。默认已搭建好MySQL环境。
+
 ## 1.授权、登录相关
-以root用户登录MySQL
+### 启动MySQL服务常用命令:
+* 启动mysql服务：sudo start mysql 或者 sudo service mysql start
+* 停止mysql服务：sudo stop mysql 或者 sudo service mysql stop
+* 重启mysql服务： sudo restart mysql 或者 sudo service mysql restart
+* 查看mysql数据库的版本号：mysql -V
+* 启动mysqld服务: sudo /etc/init.d/mysql start
+* 停止mysqld服务: sudo /etc/init.d/mysql stop
+* 启动mysqld服务: sudo /etc/init.d/mysql restart
+
+### 以root用户登录MySQL
 ```sh
 mysql -uroot -p
 ```
@@ -18,6 +28,8 @@ mysql -uroot -p
 create user mhy inentified by '123';
 ```
 用户名为: `mhy`, 密码为: `123`。
+
+### 授权
 创建用户后需要进行授权， 授权命令格式:
 
 `grant [privilegesCode] on [dbName.tableName] to [username@host] identified by ["password"];`
@@ -280,13 +292,13 @@ alter table tableName modify columnName char(20) unique key;
 
 插入数据使用`insert into`语句，具体如下：
 ```sh
-inset into tableName (字段1, 字段2, 字段3,...字段n) values (值1, 值2, 值3, ...值n);
+insert into tableName (字段1, 字段2, 字段3,...字段n) values (值1, 值2, 值3, ...值n);
 # 如果数据为字符串，必须加引号。
 ```
 注意：以上语句插入数据的时候必须要保证一致性，即前后必须一一对应。
 还有一种方式：
 ```sh
-inset into tableName (字段1=值1, 字段2=值2, ...);
+insert into tableName (字段1=值1, 字段2=值2, ...);
 ```
 ### 修改数据
 
