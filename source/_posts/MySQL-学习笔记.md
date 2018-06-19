@@ -9,7 +9,7 @@ date: 2018-03-03 11:35:30
 MySQL数据库学习笔记。
 MySQL环境搭建可查阅资料，此处不细说。默认已搭建好MySQL环境。
 
-## 1.授权、登录相关
+## 授权、登录相关
 ### 启动MySQL服务常用命令:
 * 启动mysql服务：sudo start mysql 或者 sudo service mysql start
 * 停止mysql服务：sudo stop mysql 或者 sudo service mysql stop
@@ -73,7 +73,7 @@ drop user zhangsan@'%';
 ```sh
 show grants for 'mhy';
 ```
-## 2.创建、修改和删除数据库 database
+## 创建、修改和删除数据库 database
 
 ### 创建数据表
 
@@ -120,7 +120,7 @@ alter table tableName rename to newTableName;
 
 如果引擎是innodb的话，数据库名称不能修改，其他引擎的数据库重命名有数据丢失的风险，所以在创建数据库的时候命名切勿草率。
 
-## 3.创建和修改数据表 table
+## 创建和修改数据表 table
 创建数据表之前需要选择数据库，使用以下命令选择数据库：
 ```sh
 use dbName;
@@ -171,7 +171,7 @@ truncate table tableName;
 ```
 对于有主外键关系的表，不能使用truncate而应该使用不带where子句的delete语句，由于truncate不记录在日志中，不能够激活触发器。
 
-## 4.SQL数据类型
+## SQL数据类型
 
 SQL语句常见的数据类型有字符串、数字和日期三大类。
 
@@ -191,7 +191,7 @@ CHAR和VARCHAR类型类似，但它们保存和检索的方式不同。它们的
 
 合理选用数据类型对于提高MySQL性能具有非常重要的意义，这一块可以参考《高性能MYSQL》进行学习。
 
-## 5.约束
+## 约束
 
 约束主要完成对数据的检验和限制，从而保证数据库的完整性。常见的约束有以下几种：
 - 外键约束(foreign key)
@@ -284,7 +284,7 @@ alter table tableName add foreign key 列名 references 父表(对应列名);
 alter table tableName modify columnName char(20) unique key;
 ```
 
-## 6.插入和修改记录
+## 插入和修改记录
 
 建立好数据表之后就可以插入数据了。
 
@@ -308,7 +308,7 @@ update set命令格式：
 update tableName set 字段=新值, ... where 条件;
 ```
 
-## 7.查询
+## 查询
 数据查询使用`select`语句。
 `select 查询项 from tableName [where 条件]`
 

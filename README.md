@@ -1,7 +1,7 @@
 # 我的博客
 
 ### 博客地址：
- http://mhynet.cn
+ http://blog.mhynet.cn
 
 
 ### 操作命令：
@@ -115,7 +115,7 @@ leancloud_visitors:
 livere_uid: your uid
 ```
 ### 部署到github 和 gitee
-最开始做的时候只是部署到github, 并且将自己的域名[mhynet.cn](https://mhynet.cn)解析到GitHub上，这样可以通过自己的域名访问博客。后来因为国内访问Github慢的原因将博客备份到了Gitee,但是还有个问题，Gitee并不支持域名解析，所以无法配成成通过自己的域名来访问Gitee。这个问题还在探索中。
+最开始做的时候只是部署到github, 并且将自己的域名[blog.mhynet.cn](https://blog.mhynet.cn)解析到GitHub上，这样可以通过自己的域名访问博客。后来因为国内访问Github慢的原因将博客备份到了Gitee,但是还有个问题，Gitee并不支持域名解析，所以无法配成成通过自己的域名来访问Gitee。这个问题还在探索中。
 这里要记录的是配置推送到Gitee和Github的方法。
 博客发布`hexo d`同时推送的配置是在根目录:
 ```yml
