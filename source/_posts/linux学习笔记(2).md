@@ -151,8 +151,8 @@ echo $greeting $greeting_1
 
 #### 5.4 获取字符串长度
 ```sh
-string="beijing"
-echo ${#string} #输出 7
+# string="beijing"
+# echo ${#string} #输出 7
 ```
 
 #### 5.5 提取字符串
@@ -190,7 +190,6 @@ echo `expr index "$string" is` # 输出
 
 | 表达式                             | 含义                                                          |
 |---------------------------------|-------------------------------------------------------------|
-| ${#string                       | $string的长度                                                  |
 | ${string:position               | 在$string中, 从位置$position开始提取子串                               |
 | ${string:position:length        | 在$string中, 从位置$position开始提取长度为$length的子串                    |
 |                                 |                                                             |
@@ -220,7 +219,7 @@ array_name=(
   value0
   value1
   value2
-  value3	
+  value3
 )
 ```
 还可以单独定义数组的各个分量：
@@ -231,12 +230,12 @@ array_name[100]=value100
 ```
 可以不使用连续的下标，而且下标的范围没有限制。
 
-#### 6.2 数组的操作 
+#### 6.2 数组的操作
 
 * 读取数组
 
 读取数组的语法：
-```sh 
+```sh
 $(array_name[index])
 ```
 使用@符号可以获取数组中所有元素：

@@ -28,3 +28,6 @@ meta属性viewport项新增一个字段`viewport-fit=cover`
 ```jade
 meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover', name='viewport')
 ```
+
+百度统计和google分析的文件放在source目录下即可。
+
