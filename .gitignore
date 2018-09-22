@@ -5,3 +5,8 @@ db.json
 *.log
 .DS_Store
 .deploy*/
+.idea
+.vscode
+*.swp
+*/hexo-theme-BlueLake
+themes/*
