@@ -10,6 +10,9 @@ Set和Map是ES6新增的数据结构, Set类似于数组，Map类似于对象。
 Set的元素可以是任何类型的数据，但是都是唯一的，没有重复的值。
 Set本身是一个构造函数，用来生成Set实例。
 生成Set实例用new操作符。
+
+<!-- more -->
+
 ### 生成Set实例
 ```js
 const arr = [1,2,3,3, [1,2,3], {name:'li',age:22}];
@@ -69,7 +72,7 @@ set.has('s'); //true
 set.delete('s'); // true
 set.has('s'); //false
 ```
-#### clear() 
+#### clear()
 clear方法用于清空Set。没有返回值。
 ```js
 const set = new Set([1,2,3,4,5]);
