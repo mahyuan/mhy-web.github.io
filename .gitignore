@@ -10,3 +10,4 @@ db.json
 *.swp
 */hexo-theme-BlueLake
 themes/*
+package-lock.json
