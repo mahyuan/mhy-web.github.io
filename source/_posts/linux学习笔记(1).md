@@ -58,6 +58,13 @@ ls 命令的选项详解:
 ### chown
 改变文件所有者命令格式：
 > chown [选项] 参数
+> chown [选项]... [所有者][:[组]] 文件...
+
+eg:
+```sh
+chown -R mhy:mhy ~/.ssh
+```
+同时把`.ssh`的所有者和组都改成了mhy
 
 选项：
  - -R 或 --recursive 递归处理
