@@ -1,0 +1,14 @@
+node_modules
+Thumbs.db
+public
+db.json
+*.log
+.DS_Store
+.deploy*/
+.idea
+.vscode
+*.swp
+*/hexo-theme-BlueLake
+themes/*
+package-lock.json
+yarn.lock
