@@ -1,10 +1,13 @@
 ---
 title: 使用hexo+github搭建免费个人博客 #文章页面上的显示名称，一般是中文
-date: 2018-5-24 #文章生成时间，一般不改，当然也可以任意修改
+date: 2017-12-24 #文章生成时间，一般不改，当然也可以任意修改
 categories: 博客 #分类
 tags: [hexo, github] #文章标签，可空，多标签请用格式，注意:后面有个空格
 ---
+
 ## 前言
+（本文是刚开始学习hexo搭建博客的时候参考了很多博客记录的，比较初级，后来因多次在不同设备上搭建环境，总结了一些个人认为比较有用的知识点，尤其是多设备下搭建方面，记录在该项目的[README](https://github.com/mhy-web/mhy-web.github.io/blob/hexo/README.md)下，欢迎查阅）。
+
 最开始搭建部分参考了[这篇文章](http://blog.liuxianan.com/build-blog-website-by-hexo-github.html)，后面又新增了评论、页面访问量、https服务、主题配置、多终端配置、百度和谷歌搜索、SEO优化等部分，搜集了很多资料，可能某些部分不是很详细但是比较全面。
 
 <!-- more -->
@@ -23,14 +26,7 @@ tags: [hexo, github] #文章标签，可空，多标签请用格式，注意:后
 
 - 有一个github账号，没有的话去注册一个；
 - 安装了node.js、npm，并了解相关基础知识；
-- 安装了git for windows（或者其它git客户端）
-
-本文所使用的环境：
-
-- Windows8.1
-- node.js@5.5.0-
-- git@1.9.2
-- hexo@3.2.2
+- 安装了git和命令行工具
 
 ## 搭建github博客
 
@@ -144,12 +140,11 @@ $ hexo s # 启动服务
 ![](http://image.liuxianan.com/201608/20160818_120700_028_2426.png)
 
 `hexo s`是开启本地预览服务，打开浏览器访问 http://localhost:4000 即可看到内容，很多人会碰到浏览器一直在转圈但是就是加载不出来的问题，一般情况下是因为端口占用的缘故，因为4000这个端口太常见了，解决端口冲突问题请参考这篇文章：
-
 http://blog.liuxianan.com/windows-port-bind.html
 
-第一次初始化的时候hexo已经帮我们写了一篇名为 Hello World 的文章，默认的主题比较丑，打开时就是这个样子：
+<!-- 第一次初始化的时候hexo已经帮我们写了一篇名为 Hello World 的文章，默认的主题比较丑，打开时就是这个样子： -->
 
-![](http://image.liuxianan.com/201608/20160818_132443_202_6848.png)
+<!-- ![](http://image.liuxianan.com/201608/20160818_132443_202_6848.png) -->
 
 ### 修改主题
 

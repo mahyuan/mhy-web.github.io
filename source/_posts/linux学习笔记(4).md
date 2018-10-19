@@ -1,17 +1,17 @@
 ---
-title: user管理
-category: javascript
+title: linux学习笔记(3)
+category: linux
 tags:
-  - javascript
+	- linux
+	- bash
 date: 2018-09-22 18:15:31
 ---
-# 用户和用户组的管理
+这里记录下linux系统下用户和用户组的管理方面的学习笔记。
 ```
 用户: 使用操作系统的人
 用户组: 具有相同系统权限的一组用户
 ```
 `/etc/group` 存储当前系统中所有用户组信息
-
 格式：
 ```
  group:x:123:ABC,def,xyz

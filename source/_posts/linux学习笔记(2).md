@@ -1,15 +1,13 @@
 ---
 title: linux 学习笔记（2）
-category: javascript
+category: linux
 tags:
-  - javascript
+	- linux
+	- bash
 date: 2018-08-20 13:26:13
 ---
 
-## shell学习笔记
-
 ### 1.shell 脚本
-
 脚本语言是用来让计算机自动化执行完成一系列工作的程序，不需要编译，通常是通过解释器运行的。
 
 <!-- more -->

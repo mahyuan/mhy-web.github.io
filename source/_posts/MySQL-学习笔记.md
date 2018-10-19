@@ -1,6 +1,6 @@
 ---
 title: MySQL学习笔记
-category: mysql
+category: 数据库
 tags:
   - mysql
   - 数据库
@@ -37,7 +37,7 @@ create user mhy inentified by '123';
 `[]`内的项需要根据自己的情况选择。
 
 ```sh
-grant all privileges on test.* to mhy@localhost identified by '123';  
+grant all privileges on test.* to mhy@localhost identified by '123';
 flush privileges;
 ```
 
@@ -212,7 +212,7 @@ CHAR和VARCHAR类型类似，但它们保存和检索的方式不同。它们的
 # 创建数据表时加入主键的两种方法
 create table tableName (
   字段名1 数据类型 primary key,
-  字段名2 数据类型 
+  字段名2 数据类型
 );
 create table tableName (
   字段名1 数据类型,
@@ -223,7 +223,7 @@ create table tableName (
 # 添加主键 列名columnName如果为多个时建立联合主键
 alter table tableName add primary key(columnName);
 
-# 删除主键约束  
+# 删除主键约束
 alter table tableName drop primary key;
 
 # 修改列为主键
@@ -264,14 +264,14 @@ create table sonTable(
 - 父表和子表必须使用相同的存储引擎， 数据表的存储引擎只能为InnoDB,default-storage-engine-INNODB
 - 外键列和参照列必须具有相似的数据类型，数字的长度或是有符号位必须相同，而字符 的长度可以不同
 - 外键列和参照列必须创建索引，如果外键列不存在索引的话，MySQL将自动创建索引。
- 
+
 设定参照列:FOREIGN KEY(id) PEFERENCES provinces(id)
 ```sh
 # 删除外键约束
 alter table tableName drop foreign key 外键约束名;
 (创建外键的方法没有指定约束名称，系统会默认给外键约束分配外键约束名称，命名为student_ibfk_n)
 
-# 增加外键约束 
+# 增加外键约束
 alter table tableName add foreign key 列名 references 父表(对应列名);
 ```
 

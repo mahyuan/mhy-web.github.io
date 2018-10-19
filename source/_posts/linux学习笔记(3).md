@@ -1,19 +1,18 @@
 ---
 title: linux学习笔记(3)
-category: javascript
+category: linux
 tags:
-  - javascript
+	- linux
+	- bash
 date: 2018-09-11 18:12:07
 ---
-# shell基础
-
-运行shell脚本
 
 ## echo 命令
 > echo [选项] [输出内容]
 
 选项：
 - -e 支持反斜杠控制的字符转换
+<!-- more -->
 
 |控制字符| 作用  |
 |-----|------|
@@ -26,7 +25,7 @@ date: 2018-09-11 18:12:07
 | \0n | nn 按八进制ASCII码表输出字符，其中0是数字零，nnn是三位八进制数 |
 | \xh | h 按照十六进制ASCII码表输出z福。其中hh是两位十六进制数 |
 
-<!-- more --> 
+<!-- more -->
 
 ## alias
 
