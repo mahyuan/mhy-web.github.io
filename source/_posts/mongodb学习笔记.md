@@ -1,6 +1,9 @@
-# mongodb学习笔记
-
-
+---
+title: mongodb学习笔记
+date: 2018-07-04 10:36:21
+category: javascript
+tags: [mongodb, 数据库]
+---
 创建数据库
 如果存在则切换，不存在则创建
 ```
@@ -37,7 +40,7 @@ options： 可选参数对象，有以下选项
 ```
 show collections
 ```
-eg: 
+eg:
 ```
 db.createCollection("my_test_coll1", { capped: true, autoIndexId: true, size: 6142800, max : 10000 })
 ```
@@ -58,7 +61,7 @@ db.COLLECTION_NAME.insert(document)
 ```
 eg:
 ```
-db.col.insert({title: 'MongoDB 教程', 
+db.col.insert({title: 'MongoDB 教程',
     description: 'MongoDB 是一个 Nosql 数据库',
     by: 'mhy',
     url: 'http://www.mhynet.cn',
@@ -68,7 +71,7 @@ db.col.insert({title: 'MongoDB 教程',
 ```
 可以将数据定义成一个变量，然后插入
 ```
-document=({title: 'MongoDB 教程', 
+document=({title: 'MongoDB 教程',
     description: 'MongoDB 是一个 Nosql 数据库',
     by: 'mhy',
     url: 'http://www.mhynet.cn',
@@ -82,7 +85,7 @@ db.col2.insert(document)
 ```
 也可以执行
 ```
-db.col.save(document) 
+db.col.save(document)
 ```
 如果不知道_id字段则效果和insert一样，如果指定了_id，则会更新该_id的数据
 
