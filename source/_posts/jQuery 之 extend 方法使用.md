@@ -8,6 +8,8 @@ stickie: true
 
 jQuery 的 API 手册中，extend 方法挂载在 jQuery 和 jQuery.fn 两个不同的对象上，但在 jQuery 内部代码实现的是相同的，只是功能各不相同。
 
+<!-- more -->
+
 先看看官方给出的解释：
 >   -  jQuery.extend Merge the contents of two or more objects together into the first object. 把两个或者多个对象合并到第一个对象当中；
 > -  jQuery.fn.extend Merge the contents of an object onto the jQuery prototype to provide new jQuery instance methods. 把对象挂载到 jQuery 的 prototype 上以扩展一个新的 jQuery 实例方法 。

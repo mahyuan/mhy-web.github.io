@@ -7,6 +7,9 @@ tags:  [正则表达式, javascript]
 [转载地址](http://www.cnblogs.com/rubylouvre/archive/2010/03/09/1681222.html)
 
 网上正则表达式的教程够多了，但由于javascript的历史比较悠久，也比较古老，因此有许多特性是不支持的。我们先从最简单地说起，文章所演示的正则基本都是perl方式。
+
+<!-- more -->
+
 ## 元字符
 
 ( [ { \ ^ $ | ) ? * + .

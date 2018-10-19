@@ -7,6 +7,9 @@ tags: [this, self, javascript]
 
 一、self
 这个非常简单。我们知道，打开任何一个网页，浏览器会首先创建一个窗口，这个窗口就是一个window对象，也是js运行所依附的全局环境对象和全局作用域对象。self 指窗口本身，它返回的对象跟window对象是一模一样的。也正因为如此，window对象的常用方法和函数都可以用self代替window。举个例子，常见的写法如“self.close();”，把它放在<a>标记中：“<a href="javascript:self.close();">关闭窗口</a>”，单击“关闭窗口”链接，当前页面关闭。
+
+<!-- more -->
+
 二、this关键字
 在讲this之前，看下面的一段代码：
 
@@ -22,18 +25,18 @@ function thisTest()
       this.element.style.cursor = "pointer";
       this.element.attachEvent('onclick', this.ToString);
   }
-   
+
   thisTest.prototype.RenderDom = function()
   {
       document.body.appendChild(this.element);
-  }     
+  }
 
   thisTest.prototype.ToString = function()
   {
       alert("单击我："+this.textValue);
   };
   var test= new thisTest();
-  test.RenderDom(); 
+  test.RenderDom();
   //test.ToString();
 </script>
 </body>
@@ -72,7 +75,7 @@ b、正确的方式
 
 <script type="text/javascript">
   function thisTest(){
-  alert(this.value); 
+  alert(this.value);
 }
 document.getElementById("btnTest").onclick=thisTest; //给button的onclick事件注册一个函数
 </script>
@@ -103,7 +106,7 @@ alert(btnOther.onclick); //第二个按钮函数
 function onclick(){
   thisTest()
 }
- 
+
 //第二个按钮
 function thisTest(){
   this.value="提交中";
@@ -120,7 +123,7 @@ By the way，每新建一个函数的副本，程序就会为这个函数副本�
 
 <script type="text/javascript">
   function thisTest(obj){
-  alert(obj.value); 
+  alert(obj.value);
 }
 </script>
 ```
@@ -257,12 +260,12 @@ function myFuncTwo() {
 function test() {
     var obj1 = new myFuncOne();
     var obj2 = new myFuncTwo();
-    obj1.A("testA");                       //显示myFuncOne-testA 
-    obj2.B("testB");                        //显示myFuncTwo-testB 
+    obj1.A("testA");                       //显示myFuncOne-testA
+    obj2.B("testB");                        //显示myFuncTwo-testB
     obj1.A.apply(obj2, ["testA"]);          //显示myFuncTwo-testA,其中[ testA”]是仅有一个元素的数组
     obj2.B.apply(obj1, ["testB"]);          //显示myFuncOne-testB,其中[ testB”]是仅有一个元素的数组
-    obj1.A.call(obj2, "testA");             //显示myFuncTwo-testA 
-    obj2.B.call(obj1, "testB");             //显示myFuncOne-testB 
+    obj1.A.call(obj2, "testA");             //显示myFuncTwo-testA
+    obj2.B.call(obj1, "testB");             //显示myFuncOne-testB
 }
 ```
 

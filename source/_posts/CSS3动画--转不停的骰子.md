@@ -13,6 +13,8 @@ tags: [css3]
 最外面的 `<div class="wrap"></div>` 用于整个结构在页面中的布局，以及设置观察者与z=0平面的距离，使具有三维位置变换的元素产生透视效果。z>0的三维元素比正常大，而z<0时则比正常小，大小程度由该属性的值决定。
   `<div class="content"></div>`是6个面的父容器，限制6个面的大小和位置。同时，旋转动画也设置在该容器上。
 
+<!-- more -->
+
 ```html
 <div class="wrap">
   <div class="content">
@@ -73,13 +75,13 @@ tags: [css3]
     transform: rotateX(-90deg) translateZ(100px);
     background: #FFFF00;
 }
-      
+
 ```
 ### 2.容器设置旋转动画：
 ```css
 .content{
     /* ... */
-    animation: rotating 4s linear infinite; 
+    animation: rotating 4s linear infinite;
 }
 @keyframes rotating{
     0%{
