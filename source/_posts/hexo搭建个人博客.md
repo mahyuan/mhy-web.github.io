@@ -142,9 +142,9 @@ $ hexo s # 启动服务
 `hexo s`是开启本地预览服务，打开浏览器访问 http://localhost:4000 即可看到内容，很多人会碰到浏览器一直在转圈但是就是加载不出来的问题，一般情况下是因为端口占用的缘故，因为4000这个端口太常见了，解决端口冲突问题请参考这篇文章：
 http://blog.liuxianan.com/windows-port-bind.html
 
-<!-- 第一次初始化的时候hexo已经帮我们写了一篇名为 Hello World 的文章，默认的主题比较丑，打开时就是这个样子： -->
+第一次初始化的时候hexo已经帮我们写了一篇名为 Hello World 的文章，默认的主题比较丑，打开时就是这个样子：
 
-<!-- ![](http://image.liuxianan.com/201608/20160818_132443_202_6848.png) -->
+![](https://upload-images.jianshu.io/upload_images/2858691-0370eac715c74d5e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp)
 
 ### 修改主题
 
@@ -338,6 +338,8 @@ deploy:
 `hexo 3.X`支持在`source`文件夹下创建`_data`文件夹, 可以存储数据。可以把主题配置文件`copy`到`_data`文件加下，如`next.yml`。这样, 在新设备上仅需要根据主题地址`git clone`下主题仓库, 然后把配置文件内容替换为`source/_data/`下对应的配置文件即可。
 还有百度搜索、谷歌搜索的文件，之前会保存在`source/_data/`文件夹内，换了设备后复制到主题目录下的`source`文件夹内，这样每次`hexo g`的时候会自动生成。
 
+多次在新设备上部署hexo博客后发现最重复和麻烦的是主题的配置，每次从github仓库拉下来博客项目后还要去找主题仓库。拉下来主题仓库，然后还需要改主题仓库的配置文件，谷歌和百度搜索配置等等，需要改很多东西，非常麻烦，后来学了点bash脚本[config_sync](https://github.com/mhy-web/mhy-web.github.io/blob/hexo/config_sync.sh)，写了个文件，每次拉取项目后执行该文件即可自动部署完成，非常快速的完成配置。
+
 注：配置忽略项
 ```yml
 skip_render:
@@ -347,7 +349,7 @@ skip_render:
 
 ### baidu搜索和Google搜索
 相关配置教程可有在google搜索，有很多讲的很详细的文章。
-google推送和baidu推送需要的两个文件备份在项目的`source/_data`文件夹（改文件夹内的文件不会编译，可当做仓库）下，新设备上复制到主题文件夹的`source`文件夹下(项目根目录的文件夹下会编译，主题目录的`source`下不会编译)。
+google推送和baidu推送需要的两个文件备份在项目的`source/_data`文件夹下(该文件夹内的文件不会编译，可当做仓库)，新设备上复制到主题文件夹的`source`文件夹下(项目根目录的文件夹下会编译，主题目录的`source`下不会编译)。
 
 ### SEO优化
 SEO优化参考了[这篇文章](https://juejin.im/post/590b451a0ce46300588c43a0), 简化了文件URL层级结构。
