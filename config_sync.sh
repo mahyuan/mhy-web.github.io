@@ -2,6 +2,7 @@
 
 localRepo="$HOME/hexo-theme-BlueLake"
 floader="themes/BlueLake"
+subGitFloader="themes/BlueLake/.git"
 
 if [ ! -d "$localRepo" ]; then
 		echo "1. local BlueLake theme repostory not exist and start clone from remote......"
@@ -19,3 +20,8 @@ cp -Rf "$HOME/hexo-theme-BlueLake" "themes/BlueLake" && echo "3. copy thems succ
 cat "source/_data/BlueLake_theme_config.yml" > "$floader/_config.yml" && echo "4. move _config.yml successed!"
 
 cat "source/_data/baidu_config_script.jade" >> "themes/BlueLake/layout/_partial/after_footer.jade" && echo "5. add baidu_config_script success!" || echo "5. add baidu_config_script failed!"
+
+if [ -d "$subGitFloader" ]; then
+	echo $( rm -rf ${subGitFloader} ) && echo "6.remove ${subGitFloader} succsssful!"
+fi
+
