@@ -25,7 +25,7 @@ widgets:
   - recent_posts #最新文章
   - archive #归档
   - tag #标签
-  #- weibo 
+  #- weibo
   - links #友情链接
 
 # Toc 文章目录
@@ -84,7 +84,7 @@ baidu_analytics: W5jYGtw56zjlVrXG  ## Your Baidu Analytics tracking id, e.g. 100
 # Miscellaneous
 show_category_count: true ## If you want to show the count of categories in the sidebar widget please set the value to true.
 widgets_on_small_screens: true ## Set to true to enable widgets on small screens.
-busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
+busuanzi: false ## If you want to use Busuanzi page views please set the value to true.
 
 # About page
 about:
@@ -100,7 +100,7 @@ about:
 #   url: ## Your weibo's url e.g.  http://weibo.com/zhengchaooo
 #   title: ## Your weibo's name e.g.  秋过冬漫长
 # - label: twitter
-#   url: 
+#   url:
 #   title:
 # - label: facebook
 #   url:

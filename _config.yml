@@ -30,7 +30,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: lang
 #跳过source目录下文件的编译, 跳过指定文件的渲染，可使用glob表达式来匹配路径。
-skip_render: 
+skip_render:
 	- test/*  # 两个 ** 表示该目录的所有下级目录, 但是两个**会报错，可能是主题里面的配置没有兼容
 	- _data/*
 	# - test/HTTP状态码.md
@@ -58,17 +58,17 @@ highlight:
 	enable: true
 	line_number: true
 	auto_detect: true
-	tab_replace: 
-  
+	tab_replace:
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 # 排序方式 按写作时间排序
-index_generator: 
+index_generator:
 	path: ''
 	per_page: 10
-	order_by: -date  
+	order_by: -date
 	#order_by: -updated
 
 # Category & Tag
@@ -90,10 +90,9 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
-Plugins: 
+Plugins:
   hexo-generator-sitemap
   hexo-generator-feed
-  hexo-generator-sitemap
   hexo-generator-baidu-sitemap
 
 #Feed Atom  SSR订阅
@@ -110,15 +109,15 @@ baidusitemap:
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy: 
+deploy:
 	type: git
-	repository: 
+	repository:
 		github: git@github.com:mhy-web/mhy-web.github.io.git # github
 		gitee: git@gitee.com:mhy-web/mhy-web.git # 码云
 	name: mhyuan
 	email: dsz9258@163.com
 	branch: master
-  
+
 # 添加本地搜索
 ## 默认本地搜索是用原生JS写的，但还需要HEXO插件创建的JSON数据文件配合。安装插件hexo-generator-json-content来创建JSON数据文件
 jsonContent:
