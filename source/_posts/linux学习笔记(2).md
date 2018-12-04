@@ -177,7 +177,7 @@ echo `expr index "$string" is` # 输出
 |-----------------|------------------------------------|
 | ${var}          | 定义var的值，与$var相同                    |
 |                 |                                    |
-| $(var-DEFAULT}  | 如果var没有被声明，那么久已$DEFAULT作为其值        |
+| $(var-DEFAULT}  | 如果var没有被声明，那么就以$DEFAULT作为其值        |
 | ${var:-DEFAULT} | 如果var没有被声明，或者其值为空，那么就以$DEFAULT作为其值 |
 |                 |                                    |
 | ${var=DEFAULT}  | 如果var没有被声明，那么就以$DEFAULT作为其值        |
