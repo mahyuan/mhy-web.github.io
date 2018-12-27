@@ -1,5 +1,5 @@
 ---
-title: express 之 request 和 response 
+title: express之request和response对象
 category: javascript
 tags:
 	- javascript
@@ -62,5 +62,132 @@ req.acceptsCharsets / req.acceptsEncodings / req.acceptsLanguages：返回指定
 - res.type()：设置Content-Type的MIME类型
 
 ### 路由
+```js
+var express = require('express');
+var app = express();
+
+//  主页输出 "Hello World"
+app.get('/', function (req, res) {
+   console.log("主页 GET 请求");
+   res.send('Hello GET');
+})
 
 
+//  POST 请求
+app.post('/', function (req, res) {
+   console.log("主页 POST 请求");
+   res.send('Hello POST');
+})
+
+//  /del_user 页面响应
+app.get('/del_user', function (req, res) {
+   console.log("/del_user 响应 DELETE 请求");
+   res.send('删除页面');
+})
+
+//  /list_user 页面 GET 请求
+app.get('/list_user', function (req, res) {
+   console.log("/list_user GET 请求");
+   res.send('用户列表页面');
+})
+
+// 对页面 abcd, abxcd, ab123cd, 等响应 GET 请求
+app.get('/ab*cd', function(req, res) {
+   console.log("/ab*cd GET 请求");
+   res.send('正则匹配');
+})
+
+
+var server = app.listen(8081, function () {
+
+  var host = server.address().address
+  var port = server.address().port
+
+  console.log("应用实例，访问地址为 http://%s:%s", host, port)
+
+})
+```
+
+### 静态文件
+Express 提供了内置的中间件 express.static 来设置静态文件如：图片， CSS, JavaScript 等。
+
+你可以使用 express.static 中间件来设置静态文件路径。例如，如果你将图片， CSS, JavaScript 文件放在 public 目录下，你可以这么写：
+```js
+app.use(express.static('public'));
+```
+假设有一张图片/public/images/logo.png，应用添加处理静态文件的功能实例：
+```js
+var express = require('express');
+var app = express();
+
+app.use(express.static('public'));
+
+app.get('/', function (req, res) {
+   res.send('Hello World');
+})
+
+var server = app.listen(8081, function () {
+
+  var host = server.address().address
+  var port = server.address().port
+
+  console.log("应用实例，访问地址为 http://%s:%s", host, port)
+
+})
+```
+用node启动该文件后，在浏览器中访问 http://127.0.0.1:8081/images/logo.png， 即可看到/public/images/logo图片
+
+使用post请求的实例
+```js
+var express = require('express');
+var app = express();
+var bodyParser = require('body-parser');
+
+// 创建 application/x-www-form-urlencoded 编码解析
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+
+app.use(express.static('public'));
+
+app.get('/index.htm', function (req, res) {
+   res.sendFile( __dirname + "/" + "index.htm" );
+})
+
+app.post('/process_post', urlencodedParser, function (req, res) {
+
+   // 输出 JSON 格式
+   var response = {
+       "first_name":req.body.first_name,
+       "last_name":req.body.last_name
+   };
+   console.log(response);
+   res.end(JSON.stringify(response));
+})
+
+var server = app.listen(8081, function () {
+
+  var host = server.address().address
+  var port = server.address().port
+
+  console.log("应用实例，访问地址为 http://%s:%s", host, port)
+
+})
+```
+使用中间件向node服务器发送cookie的实例
+```js
+// express_cookie.js 文件
+var express      = require('express')
+var cookieParser = require('cookie-parser')
+var util = require('util');
+
+var app = express()
+app.use(cookieParser())
+
+app.get('/', function(req, res) {
+    console.log("Cookies: " + util.inspect(req.cookies));
+})
+
+app.listen(8081)
+```
+### 总结：
+express是基于node快速搭建网站的框架，底层实现使用了promise + callback的方式，功能全面。但是比较推荐的是koa2，koa2是koa2.0版本之后的称呼，koa1.0版本使用了generator函数实现，2.0使用了async/await函数实现，非常精简，但是功能并不比Express少，express能做的koa都能做，而且做得更好。不同的是，koa把express的部分功能拆分出去了，使用的时候可以根据需求合理引入中间件，比如koa-router。在上一家公司的时候使用过koa1.0多页面的电商网站，前端项目集成了部分node代码实现页面路由和服务的渲染，体验非常棒，也阅读过公司内部使用koa2.0的后台项目，感觉更友好一些。
+本篇博客大部分内容都是摘自[runoob](http://www.runoob.com/nodejs/nodejs-express-framework.html)，不是原创，算是一篇介绍express的笔记吧。
