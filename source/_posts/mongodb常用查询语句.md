@@ -190,7 +190,7 @@ db.game.update({"_id": 123}, {"$set": {"address.0.tel": 213}})
 ```
 db.game.update({"address.place": "nanji"}, {"$set": {"address.$.tel": 123}})
 ```
-在上面的语句中，$就是查询条件{"address.place": "nanji"}的查询结果，也就是{place: "nanji", tel: 123}，所以{"address.$.tel": 123}也就是{"address.{place: "nanji", tel: 123}.tel": 123}
+在上面的语句中，$就是查询条件`{"address.place": "nanji"}`的查询结果，也就是`{place: "nanji", tel: 123}`，所以`{"address.$.tel": 123}`也就是`{"address.{place: "nanji", tel: 123}.tel": 123}`
 
 4、删除（remove）
 删除所有文档：
