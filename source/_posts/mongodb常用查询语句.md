@@ -1,14 +1,11 @@
 ---
-title: [转载]mongodb常用查询语句
-date: 2019-01-04 11:36:21
+title: "[转载]mongodb常用查询语句"
+date: 2019-1-4 11:36:21
 category: 数据库
 tags: [mongodb, 数据库]
 ---
-
-MongoDB常用语句
-
 记录一下MongoDB常用语句，顺带与SQL做个简单的对比。
-
+<!-- more -->
 1、查询(find)
 
 （1）查询所有结果
