@@ -41,7 +41,6 @@ req.acceptsCharsets / req.acceptsEncodings / req.acceptsLanguages：返回指定
 - response 对象表示 HTTP 响应，即在接收到请求时向客户端发送的 HTTP 响应数据。
 
 常见属性有：
--
 - res.app：同req.app一样
 - res.append()：追加指定HTTP头
 - res.set()在res.append()后将重置之前设置的头
