@@ -96,8 +96,21 @@ hexo d
 <blockquote class="blockquote-center">优秀的人，不是不合群，而是他们合群的人里面没有你</blockquote>
 ```
 ### 阅读量统计
-阅读量统计使用的是[LeanCloud](https://leancloud.cn/dashboard/applist.html#/apps),
-配置可以参考[这篇教程](http://www.jeyzhang.com/hexo-next-add-post-views.html)。
+阅读量使用的是不蒜子，配置在主题里面，配置方法见主题介绍文件。需要注意的是自2018年10月份起，不蒜子使用的七牛云域名变更了，在这之前部署的博客需要更新该域名，截止今天（2019/1/8）该主题还没有更新，所以使用该主题的需要手动更新该文件里面的域名。
+需要改动的文件位置在`themes/BlueLake/layout/_partial/after_footer.jade`，需要改动的是`theme.busuanzi`代码块的src，具体参考官网介绍：
+> 因七牛强制过期『dn-lbstatics.qbox.me』域名，与客服沟通无果，只能更换域名到『busuanzi.ibruce.info』！
+改完之后文件
+```jade
+if theme.busuanzi == true
+  script(src='http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
+
+//- ...
+```
+我把改完后的该文件存放在了`source/_data/after_footer.jade`文件内，在执行一键部署的shell文件中做了同步处理`config_sync.sh`。
+
+除了不蒜子，还可以使用[LeanCloud](https://leancloud.cn/dashboard/applist.html#/apps)进行阅读量统计，
+配置可以参考[Hexo的NexT主题个性化：添加文章阅读量](http://www.jeyzhang.com/hexo-next-add-post-views.html)和[基于 LeanCloud 平台 为 Hexo 博客添加文章阅读量](http://bluesh.me/blog/2017/06/21/add-post-views/)这两篇文章。
+需要在项目的配置文件中引入ID和key，然后需要在模板文件中引入一段js代码。
 ```yml
 # add post views
 leancloud_visitors:
@@ -141,7 +154,7 @@ deploy:
 
 注：配置忽略项
 ```yml
-skip_render: 
+skip_render:
 	- _test/*  # 两个 ** 表示该目录的所有下级目录, 但是两个**会报错，可能是主题里面的配置没有兼容
 	- _data/*
 ```
