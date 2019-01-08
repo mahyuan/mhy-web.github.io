@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 马华元的博客 # 标题
+title: mhyuan的博客 # 标题
 subtitle: 这里是我的学习日志。 # 副标题
 description: 这里是我的学习日志。
-kewwords: 马华元博客, 马华元, 博客, hexo, mhy, mhyuan, mahuayuan, hexo+github
-author: MaHuaYuan
+kewwords: mhyuan博客, mhyuan, 博客, hexo, mhy, mhyuan, hexo+github
+author: mhyuan
 language: zh-CN
 timezone: Asia/Shanghai # 时区
 
@@ -31,10 +31,10 @@ code_dir: downloads/code
 i18n_dir: lang
 #跳过source目录下文件的编译, 跳过指定文件的渲染，可使用glob表达式来匹配路径。
 skip_render:
-	- test/*  # 两个 ** 表示该目录的所有下级目录, 但是两个**会报错，可能是主题里面的配置没有兼容
-	- _data/*
-	# - test/HTTP状态码.md
-	# - test/数据结构与算法学习之排序.md
+  - test/*  # 两个 ** 表示该目录的所有下级目录, 但是两个**会报错，可能是主题里面的配置没有兼容
+  - _data/*
+  # - test/HTTP状态码.md
+  # - test/数据结构与算法学习之排序.md
 
 ## Themes: https://hexo.io/themes/
 # theme: landscape , next
@@ -55,10 +55,10 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-	enable: true
-	line_number: true
-	auto_detect: true
-	tab_replace:
+  enable: true
+  line_number: true
+  auto_detect: true
+  tab_replace:
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -66,10 +66,10 @@ highlight:
 # order_by: Posts order. (Order by date descending by default)
 # 排序方式 按写作时间排序
 index_generator:
-	path: ''
-	per_page: 10
-	order_by: -date
-	#order_by: -updated
+  path: ''
+  per_page: 10
+  order_by: -date
+  #order_by: -updated
 
 # Category & Tag
 default_category: uncategorized
@@ -97,9 +97,9 @@ Plugins:
 
 #Feed Atom  SSR订阅
 feed:
-	type: atom
-	path: atom.xml
-	limit: 20
+  type: atom
+  path: atom.xml
+  limit: 20
 
 # 自动生成sitemap
 sitemap:
@@ -110,39 +110,39 @@ baidusitemap:
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-	type: git
-	repository:
-		github: git@github.com:mhy-web/mhy-web.github.io.git # github
-		gitee: git@gitee.com:mhy-web/mhy-web.git # 码云
-	name: mhyuan
-	email: dsz9258@163.com
-	branch: master
+  type: git
+  repository:
+    github: git@github.com:mhy-web/mhy-web.github.io.git # github
+    gitee: git@gitee.com:mhy-web/mhy-web.git # 码云
+  name: mhyuan
+  email: dsz9258@163.com
+  branch: master
 
 # 添加本地搜索
 ## 默认本地搜索是用原生JS写的，但还需要HEXO插件创建的JSON数据文件配合。安装插件hexo-generator-json-content来创建JSON数据文件
 jsonContent:
-	meta: false
-	pages: false
-	posts:
-		title: true
-		date: true
-		path: true
-		text: true
-		raw: false
-		content: false
-		slug: false
-		updated: false
-		comments: false
-		link: false
-		permalink: false
-		excerpt: false
-		categories: false
-		tags: true
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: true
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true
 
 # add post views 增加阅读量  使用lancloud
 leancloud_visitors:
-	enable: true
-	app_id: 72QKoBvyH9pQlyIlDCTEqQdi-gzGzoHsz
-	app_key: J4r0oeQgJjCtAI48KADjsgHu
+  enable: true
+  app_id: 72QKoBvyH9pQlyIlDCTEqQdi-gzGzoHsz
+  app_key: J4r0oeQgJjCtAI48KADjsgHu
 
 
