@@ -108,14 +108,14 @@ about:
 
 #Cmments 评论
 comment:
-	duoshuo: #chaooo ## duoshuo_shortname
-	disqus: ## disqus_shortname
-	livere: MTAyMC8zNDM1OS8xMDg5Ng== ## 来必力(data-uid)
-	uyan: ## 友言(uid)
-	cloudTie: ## 网易云跟帖(productKey)
-	changyan: ## 畅言需在下方配置两个参数，此处不填。
-		appid: ## 畅言(appid)
-		appkey: ##畅言(appkey)
+  duoshuo: #chaooo ## duoshuo_shortname
+  disqus: ## disqus_shortname
+  livere: MTAyMC8zNDM1OS8xMDg5Ng== ## 来必力(data-uid)
+  uyan: ## 友言(uid)
+  cloudTie: ## 网易云跟帖(productKey)
+  changyan: ## 畅言需在下方配置两个参数，此处不填。
+    appid: ## 畅言(appid)
+    appkey: ##畅言(appkey)
 
 # Links widget. Empty links will hide widget.
 links:
