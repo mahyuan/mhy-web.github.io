@@ -9,7 +9,7 @@ tags: [window, javascript]
 ## `window`对象中屏幕尺寸相关的属性
 ### `window.screenX` 和 `window.screentY`
 返回浏览器窗口左上角相对于屏幕左上角的（0,0)的水平距离和垂直距离， 单位为像素。
-
+<!-- more -->
 ### `window.innerWidth` 和 `window.innerHeight`
 返回当前浏览器窗口可视部分的宽度和高度, 即“视口”（viewport）, 单位像素。
 这两个属性包含滚动条的尺寸。

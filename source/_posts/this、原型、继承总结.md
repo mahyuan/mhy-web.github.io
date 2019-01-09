@@ -8,7 +8,7 @@ tags: [javascript, 原型, this, 继承]
 ## this 相关问题
 ### 问题1： apply、call 、bind有什么作用，什么区别
 
-
+<!-- more -->
 * Function.prototype.bind:
 
  bind，返回一个新函数，并且使函数内部的this为传入的第一个参数
@@ -54,13 +54,13 @@ sum.apply(null,[1,2]);
     * 调用函数
 ```
 var info = 'tom';
-function foo(){   
-  //this指向window 
+function foo(){
+  //this指向window
   var info = 'jerry';
   console.log(this.info);   //tom
   console.log(this===window)  //true
 }
-foo(); 
+foo();
 foo.call();
 foo.apply();
 call和apply可以改变函数中this的指向　　
@@ -71,7 +71,7 @@ foo.call(obj);    //这里foo函数里面的this就指向了obj
 foo.apply(obj);
 ```
     * 借用别的对象的方法
-    
+
     eg:求数组中的最大值
 ```
 var arr = [123,34,5,23,3434,23];
@@ -88,12 +88,12 @@ fn.apply(context, paramArray)
 ```
 
 ### 问题2： 以下代码输出什么?
-    
+
 ```
-    var john = { 
-        firstName: "John" 
+    var john = {
+        firstName: "John"
     }
-    function func() { 
+    function func() {
         alert(this.firstName + ": hi!")
     }
     john.sayHi = func
@@ -104,12 +104,12 @@ fn.apply(context, paramArray)
 
 ### 问题3： 下面代码输出什么，为什么
 ```
-    func() 
-    function func() { 
+    func()
+    function func() {
        alert(this)
     }
     //输出： Window
-    //原因：func()等价于func.call(undefined); 
+    //原因：func()等价于func.call(undefined);
     //而undefined会被浏览器默认为全局对象window;
 ```
 
@@ -124,15 +124,15 @@ fn.apply(context, paramArray)
     //输出为：#document;  window;
     //在事件处理程序中this代表事件源DOM对象
     //(setTimeout、setInterval这两个方法执行的函数this也是全局对象)
-    
+
 ```
 
 #### 问题5：下面代码输出什么，why
 ```
-    var john = { 
-        firstName: "John" 
+    var john = {
+        firstName: "John"
     }
-    function func() { 
+    function func() {
         alert( this.firstName )
     }
     func.call(john)
@@ -213,65 +213,65 @@ fn.apply(context, paramArray)
     console.log(ch); //d , 因为d 出现了5次
 ```
 ```
-    //方法一： 
-    String.prototype.getMostOften = function(){ 
-        var obj = {}; 
-        for(var i=0,k;i<this.length;i++){ 
-            k = this[i]; 
-            if(obj[k]){ 
-                obj[k]++ 
-            }else{ 
-                obj[k] = 1 
-            } 
-        } 
-        var max = 0,key; 
-        for(var k in obj){ 
-            if(obj[k]>max){ 
-                max = obj[k]; 
-                key = k; 
-            } 
-        } 
-        return key; 
-    } 
-    //方法二： 
-    String.prototype.getMostOften = function(){ 
-        var arr = this.split(""); 
-        var result = arr.reduce(function(allLetters,letter){ 
-            if(allLetters[letter]){ 
-                allLetters[letter]++ 
-            }else{ 
-                allLetters[letter] = 1 
-            } 
-            return allLetters; 
-        },{}); 
-        var max = 0,k; 
-        for(var key in result){ 
-            if (result[key]>max){ 
-                max = result[key]; 
-                k = key 
-            } 
-        } 
-        return k; 
-    } 
-    var str = 'ahbbccdeddddfg'; 
-    var ch = str.getMostOften(); 
+    //方法一：
+    String.prototype.getMostOften = function(){
+        var obj = {};
+        for(var i=0,k;i<this.length;i++){
+            k = this[i];
+            if(obj[k]){
+                obj[k]++
+            }else{
+                obj[k] = 1
+            }
+        }
+        var max = 0,key;
+        for(var k in obj){
+            if(obj[k]>max){
+                max = obj[k];
+                key = k;
+            }
+        }
+        return key;
+    }
+    //方法二：
+    String.prototype.getMostOften = function(){
+        var arr = this.split("");
+        var result = arr.reduce(function(allLetters,letter){
+            if(allLetters[letter]){
+                allLetters[letter]++
+            }else{
+                allLetters[letter] = 1
+            }
+            return allLetters;
+        },{});
+        var max = 0,k;
+        for(var key in result){
+            if (result[key]>max){
+                max = result[key];
+                k = key
+            }
+        }
+        return k;
+    }
+    var str = 'ahbbccdeddddfg';
+    var ch = str.getMostOften();
     console.log(ch); //d
 ```
 #### 问题10： instanceOf有什么作用？内部逻辑是如何实现的？
 * instanceOf：判断一个对象是否为另一个对象的实例
 
 ```
-    function isInstanceOf(obj,fn){ 
-        var oldProto = obj.__proto__; 
-        do{ 
-            if(oldProto === fn.prototype){ //prototype是小写的！ 
-                return true; 
-            }else{ 
-                oldProto = oldProto.__proto__; 
-            } 
-        }while(oldProto){ 
-            return false; 
-        } 
+    function isInstanceOf(obj,fn){
+        var oldProto = obj.__proto__;
+        do{
+            if(oldProto === fn.prototype){ //prototype是小写的！
+                return true;
+            }else{
+                oldProto = oldProto.__proto__;
+            }
+        }while(oldProto){
+            return false;
+        }
     }
 ```
 
@@ -316,27 +316,27 @@ JavaScript 对象有一个指向一个原型对象的链。当试图访问一个
 #### 问题13： Object.create 有什么作用？兼容性如何？
 
 ```
-    function Person(name, age){ 
-        this.name = name; 
-        this.age = age; 
-    } 
-    Person.prototype.sayName = function(){ 
-        console.log(this.name); 
-    } 
-    function Male(name, age, sex){ 
-        Person.call(this, name, age); 
-        this.sex = sex; 
-    } 
-    Male.prototype = new Person(); 
-    //该方法同下，代替不兼容Object.create()的使用场景 
-    
-    Male.prototype = Object.create(Person.prototype); 
-    Male.prototype.constructor = Male; 
-    Male.prototype.sayAge = function(){ 
-        console.log(this.age); 
-    }; 
-    var p1 = new Male('hunger', 20, 'nan'); 
-    p1.sayName();//hunger 
+    function Person(name, age){
+        this.name = name;
+        this.age = age;
+    }
+    Person.prototype.sayName = function(){
+        console.log(this.name);
+    }
+    function Male(name, age, sex){
+        Person.call(this, name, age);
+        this.sex = sex;
+    }
+    Male.prototype = new Person();
+    //该方法同下，代替不兼容Object.create()的使用场景
+
+    Male.prototype = Object.create(Person.prototype);
+    Male.prototype.constructor = Male;
+    Male.prototype.sayAge = function(){
+        console.log(this.age);
+    };
+    var p1 = new Male('hunger', 20, 'nan');
+    p1.sayName();//hunger
     p1.sayAge();//20
 ```
 兼容性：
@@ -375,7 +375,7 @@ hasOwnProperty是JavaScript中唯一一个处理属性但是不查找原型链�
     Person.prototype.getName = function(){
         // todo ...
         console.log(this.name);
-    };    
+    };
 
     function Male(name, sex, age){
         //todo ...

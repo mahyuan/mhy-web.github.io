@@ -11,7 +11,7 @@ express是基于Node搭建web应用的k框架，使用express可以快速的搭�
 - 定义了路由表用于执行不同的 HTTP 请求动作。
 - 可以通过向模板传递参数来动态渲染 HTML 页面。
 
-<!-- morez -->
+<!-- more -->
 
 ## request 和 response 对象的具体介绍：
 

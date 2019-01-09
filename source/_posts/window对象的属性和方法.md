@@ -6,7 +6,7 @@ tags: [window, javascript]
 ---
 
 在JavaScript语言中，DOM( Document Object Model) 是操作文档的API，document 是其的一个对象；而BOM是控制浏览器行为的API，window 是其的一个对象。
-
+<!-- more -->
 <img style="width: 80%" src='http://pic4.zhimg.com/80/0c273417eb835e0700bbe2ea7ce4c4bb_hd.jpg'/>
 
 [引用知乎上的解释](http://www.zhihu.com/question/33453164),整个窗口中分为几个区域，其中：

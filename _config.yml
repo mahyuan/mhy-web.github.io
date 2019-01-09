@@ -36,10 +36,6 @@ skip_render:
   # - test/HTTP状态码.md
   # - test/数据结构与算法学习之排序.md
 
-## Themes: https://hexo.io/themes/
-# theme: landscape , next
-theme: BlueLake
-
 # stylus编译
 stylus:
   compress: true
@@ -90,6 +86,7 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+
 Plugins:
   hexo-generator-sitemap
   hexo-generator-feed
@@ -106,6 +103,13 @@ sitemap:
   path: sitemap.xml
 baidusitemap:
   path: baidusitemap.xml
+
+
+## Themes: https://hexo.io/themes/
+# theme: landscape
+# theme: BlueLake
+theme: next
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

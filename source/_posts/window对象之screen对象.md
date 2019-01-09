@@ -5,7 +5,7 @@ category: javascript
 tags: [window, javascript]
 ---
 `window.screen`返回当前window的screen对象。screen对象实现了Screen接口，它是个特殊的对象，返回当前渲染窗口中和屏幕有关的属性。
-
+<!-- more -->
 - screen.availWidth - 可用的屏幕宽度
 screen.availWidth 属性返回访问者屏幕的宽度，以像素计，减去界面特性，比如窗口任务栏。
 - screen.availHeight - 可用的屏幕高度

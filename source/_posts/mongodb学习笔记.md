@@ -10,6 +10,7 @@ tags: [mongodb, 数据库]
 ```
 use DATABASE_NAME
 ```
+<!-- more -->
 ### 显示所有数据库
 ```
 show dbs
