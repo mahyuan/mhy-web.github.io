@@ -27,4 +27,4 @@ fi
 
 # 因卜算子统计域名变更，如果theme仓库的域名还没有更新，需要更改 themes/BlueLake/layout/_partial/after_footer.jade 文件下的域名
 # 截止2019/1/8，theme开发者github还没有同步该域名（已有人提了该issue），这里手动改一下
-cat "source/_data/after_footer.jade" > "$floader/themes/BlueLake/layout/_partial/after_footer.jade" && echo "7. busuanz 域名更改，已经手动同步了!"
+# cat "source/_data/after_footer.jade" > "$floader/themes/BlueLake/layout/_partial/after_footer.jade" && echo "7. busuanz 域名更改，已经手动同步了!"
