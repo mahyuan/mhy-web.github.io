@@ -176,10 +176,10 @@ site_state: true
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
-  JueJin: https://juejin.im/user/59885f075188253d280e45c2
   GitHub: https://github.com/mhy-web/ || github
-  E-Mail: mailto:mhy9258@gmail.com || envelope
-  Blog: http://mhynet.cn
+  JueJin: https://juejin.im/user/59885f075188253d280e45c2
+  # Blog: http://mhynet.cn
+  # E-Mail: mailto:mhy9258@gmail.com || envelope
   # StackOverflow: https://stackoverflow.com/yourname || stack-overflow
   # Google: https://plus.google.com/yourname || google
   # Weibo: https://weibo.com/yourname || weibo
