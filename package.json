@@ -34,7 +34,8 @@
     "koa": "^2.5.3",
     "koa-static": "^5.0.0",
     "npm": "^6.5.0",
-    "pug": "^2.0.0-rc.1"
+    "pug": "^2.0.0-rc.1",
+    "run-sequence": "^2.2.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
