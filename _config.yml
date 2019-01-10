@@ -13,7 +13,7 @@ timezone: Asia/Shanghai # 时区
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://mhynet.cn/
+url: 'https://mhynet.cn'
 # url: http://mhy-web.gitee.io/mhy-web.github.io/
 root: /
 # permalink: :year/:month/:day/:title/
@@ -31,7 +31,7 @@ code_dir: downloads/code
 i18n_dir: lang
 #跳过source目录下文件的编译, 跳过指定文件的渲染，可使用glob表达式来匹配路径。
 skip_render:
-  - test/*  # 两个 ** 表示该目录的所有下级目录, 但是两个**会报错，可能是主题里面的配置没有兼容
+  - _test/*  # 两个 ** 表示该目录的所有下级目录, 但是两个**会报错，可能是主题里面的配置没有兼容
   - _data/*
   # - test/HTTP状态码.md
   # - test/数据结构与算法学习之排序.md
