@@ -187,7 +187,7 @@ wc < acc.log  # 统计文件的输入
 `命令1 | 命令2`
 
 命令1的正确输出作为命令2的操作对象
-```
+```sh
 netstat -an | grep ESTABLISHED
 ```
 

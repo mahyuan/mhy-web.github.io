@@ -1,5 +1,5 @@
 ---
-title: linux学习笔记(3)
+title: linux学习笔记(4)
 category: linux
 tags:
 	- linux
@@ -35,7 +35,7 @@ root用户组的组号为0,
 组密码为*或!或空表示没有组密码
 
 `/etc/paswd` 存储当前系统所有用户的信息。
-```
+```sh
 user:x:123:456:xxxx:/home/user:/bin/bash
 用户名:密码占位符:用户编号:用户组编号:用户注释信息:用户主目录:shell类型
 ```
@@ -56,7 +56,7 @@ user:x:123:456:xxxx:/home/user:/bin/bash
 `groupdel [groupName]`
 
 - 组内添加用户(用户目录默认在/home下，默认创建一个和用户名相同的用户组)：
-```
+```sh
 useradd userName
 useradd -g groupName -d /home/userName userName
 ```
@@ -84,7 +84,7 @@ useradd -g groupName -d /home/userName userName
 
 ### 主要组和附属组：
 一个用户可以属于多个组，一个主要组，若干个个附属组, 添加多个，用逗号连接多个附属组名:
-```
+```sh
 gpasswd -a 用户名  附属组名
 ```
 

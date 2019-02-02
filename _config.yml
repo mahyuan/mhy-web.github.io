@@ -108,8 +108,8 @@ baidusitemap:
 ## Themes: https://hexo.io/themes/
 # theme: landscape
 # theme: BlueLake
-theme: next
-
+# theme: next
+theme: yelee
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
