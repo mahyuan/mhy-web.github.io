@@ -6,7 +6,7 @@ tags:
 date: 2019-04-20 11:04:54
 ---
 
-最近工作中很多次遇到一种情况，表单元素中某个字段是对象组成的数组，需要使用自定义组件来遍历数组，每个数组元素对象中的许多字段需要单独封装成自定义组件，在父组件中使用`v-model方式来实现响应式的调用`。这样做的好处发挥了组件独立运行环境的特性，有效的区分了父组件表单中数组字段下各个对象的独立。
+最近工作中很多次遇到一种情况，表单元素中某个字段是对象组成的数组，需要使用自定义组件来遍历数组，每个数组元素对象中的许多字段需要单独封装成自定义组件，在父组件中使用`v-model`方式来实现响应式的调用。这样做的好处是可以利于组件独立运行环境的特性，有效的区分了父组件表单中数组字段下各个对象的独立。
 <!-- more -->
 
 假如父组件中的表单数据是这种格式的：
@@ -39,7 +39,7 @@ data() {
 ```js
 <template>
   <div>
-    <el-form ref="item" :model="content">
+    <el-form ref="item" :model="content" :rules="rules">
       <el-form-item prop="title" label="title">
         <el-input v-model="content.title" />
       </el-form-item>
@@ -77,7 +77,13 @@ export default {
   },
   data() {
     return {
-      content: { ...this.value }
+      content: { ...this.value },
+      rules: {
+        title: [{required: true, trigger: 'blur'}],
+        desc: [{required: true, trigger: 'blur'}],
+        type: [{required: true, trigger: 'blur'}],
+        img_url: [{required: true, trigger: 'blur'}],
+      }
     }
   },
   computed: {
@@ -142,7 +148,7 @@ watch: {
     <!-- 遍历数组，循环调用自定义子组件 -->
     <div v-for="(content, index) in info.items" v-show="(currentIndex - 1) === index" :key="index">
       <el-form-item prop="item" lable="item">
-        <st-item v-model="info.items[index]" :index="index"/>
+        <st-item v-model="info.items[index]" :index="index" :ref="index + '_item'"/>
       </el-form-item>
     </div>
   </el-form>
@@ -182,5 +188,21 @@ export default {
 }
 </script>
 ```
-接下来说如何在父组件提交数据时验证子组件的是否已通过验证。
 
+### 子组件表单验证
+接下来说如何在父组件提交数据时验证子组件的是否已通过验证。
+刚才子组件中定义了一个方法 `formValidate`, 该方法会将子组件的验证结果返回，在父组件中调用该方法即可获得子组件的验证结果。
+```js
+methods: {
+  submit() {
+      // 调用子组件验证，验证结果赋值给isValid变量
+    let isValid = Object.keys(this.info.item).every(key => this.$refs[key + '_item'].formValidate())
+    if (!isValid) {
+      return false
+    }
+    // ..
+  }
+}
+```
+
+参考文献： https://blog.csdn.net/ligang2585116/article/details/79475652
