@@ -119,6 +119,15 @@ export default {
 </script>
 ```
 自定义组件中props中的value属性是vue默认的，可以接收调用时绑定在`v-model`上的属性，子组件中给`value`设置默认值可以避免一些初始化时缺少字段的报错。
+为了让`v-model`正常工作，这个组件内必须：
+- 将其`value`特性绑定到一个名为`value`的prop上
+- 将其`input`事件触发时，将新的值通过自定义的`input`事件抛出
+```html
+<input v-model="title">
+<!-- 等价于 -->
+<input v-bind:value="title" v-on:input="title = $event.target.value"/>
+```
+
 子组件需要实时的把数据的变化告诉父组件，所以需要wath数据的变化，如果传给子组件的数据只是简单的对象类型，即对象的字段都是简单类型，可以直接使用vue中watch的高级用法，
 定义handler方法，使用immediaate和deep属性，具体可以参考[Vue.js中 watch 的高级用法](https://juejin.im/post/5ae91fa76fb9a07aa7677543),更标准的使用方式可以查阅官方文档。在本文例子中可以这样使用：
 ```js
