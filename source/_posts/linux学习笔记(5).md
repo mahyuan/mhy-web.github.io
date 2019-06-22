@@ -1,6 +1,6 @@
 ---
 title: linux学习笔记(4) --定时任务
-category: linux
+category: 后端
 tags:
 	- linux
   - bash

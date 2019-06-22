@@ -1,6 +1,6 @@
 ---
 title: express之request和response对象
-category: javascript
+category: 后端
 tags:
 	- javascript
 	- node

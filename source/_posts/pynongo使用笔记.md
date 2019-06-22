@@ -1,6 +1,6 @@
 ---
 title: pynongo使用笔记
-category: python
+category: 后端
 tags:
   - python
   - mongodb
@@ -10,6 +10,7 @@ date: 2019-06-11 11:38:12
 前段时间学习了python爬虫，然后爬取了必应壁纸、拉钩、小红唇视频和评论等，其中也使用了mongodb数据库存储数据。
 
 工作电脑和家里电脑都实现了壁纸每分钟实时更新，海量的背景图片，基本不重复，每天中午休息时喜欢盯着屏幕发呆，哈哈😁。其中除了用到的除了基本的爬虫至少，还有pymongo将爬取的数据存储到数据库，不会因为官方更新而丢失早期的图片信息，也用到了shell脚本和crontab定时任务，每周一中午定时爬取，然后下载图片，非常nice啊。
+<!-- more -->
 更多脚本可以去[github](https://github.com/mhy-web/python_demo)看到，自动执行的shell脚本为项目目录下的 `wallpaper.sh`文件。
 
 这里记录一下pymongo使用笔记，避免下次使用时再去找文档。

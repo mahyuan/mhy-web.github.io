@@ -1,7 +1,7 @@
 ---
 title: window对象之location
 date: 2018-02-25 00:21:28
-category: javascript
+category: 前端
 tags: [window, javascript]
 ---
 window.location 只读属性，返回一个 Location  对象，其中包含有关文档当前位置的信息。

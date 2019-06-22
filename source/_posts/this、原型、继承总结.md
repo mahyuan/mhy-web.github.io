@@ -1,7 +1,7 @@
 ---
 title: this、原型、继承总结
 date: 2017-10-29 13:16:13
-category: javascript
+category: 前端
 tags: [javascript, 原型, this, 继承]
 ---
 

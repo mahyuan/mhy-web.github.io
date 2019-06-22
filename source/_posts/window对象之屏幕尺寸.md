@@ -1,7 +1,7 @@
 ---
 title: window对象之屏幕尺寸相关的属性
 date: 2018-03-15 13:12:19
-category: javascript
+category: 前端
 tags: [window, javascript]
 ---
 

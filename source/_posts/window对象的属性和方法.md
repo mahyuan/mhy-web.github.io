@@ -1,7 +1,7 @@
 ---
 title: window对象的属性和方法
 date: 2018-02-25 10:12:19
-category: javascript
+category: 前端
 tags: [window, javascript]
 ---
 

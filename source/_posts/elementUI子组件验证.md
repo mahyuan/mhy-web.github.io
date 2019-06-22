@@ -1,8 +1,10 @@
 ---
 title: elementUI表单使用自定义组件并获取子组件验证
-category: javascript
+category: 前端
 tags:
   - javascript
+  - vue
+  - element
 date: 2019-04-20 11:04:54
 ---
 
@@ -10,38 +12,40 @@ date: 2019-04-20 11:04:54
 <!-- more -->
 
 假如父组件中的表单数据是这种格式的：
-```js
-data() {
-  return {
-    info: {
-      id: '',
-      start_time: '',
-      end_time: '',
-      items: [{
-        title: '',
-        desc: '',
-        type: '',
-        img_url: ''
-      }, {
-        title: '',
-        desc: '',
-        type: '',
-        img_url: ''
-      }]
+```html
+<script>
+  data() {
+    return {
+      info: {
+        id: '',
+        start_time: '',
+        end_time: '',
+        items: [{
+          title: '',
+          desc: '',
+          type: '',
+          img_url: ''
+        }, {
+          title: '',
+          desc: '',
+          type: '',
+          img_url: ''
+        }]
+      }
     }
   }
-}
+</script>
 ```
 要使用elementUI的 `form`组件来实现表单的数据渲染，其中items部分最合理的方式是抽离出单独的组件，在父组件中遍历该数组字段，每一项单独渲染该子组件。
 
 ## 子组件定义
 假设子组件这样定义：
-```js
+```html
 <template>
   <div>
     <el-form ref="item" :model="content" :rules="rules">
       <el-form-item prop="title" label="title">
-        <el-input v-model="content.title" />
+        <el-input v-model="content.title"/>
       </el-form-item>
       <el-form-item prop="desc" label="desc">
         <el-input v-model="content.desc" />
@@ -50,7 +54,7 @@ data() {
         <el-input v-model="content.type" />
       </el-form-item>
       <el-form-item prop="img_url" label="img">
-        <el-input v-model="content.img_url" />
+        <el-input v-model="content.img_url"/>
       </el-form-item>
     </el-form>
   </div>
@@ -130,29 +134,31 @@ export default {
 
 子组件需要实时的把数据的变化告诉父组件，所以需要wath数据的变化，如果传给子组件的数据只是简单的对象类型，即对象的字段都是简单类型，可以直接使用vue中watch的高级用法，
 定义handler方法，使用immediaate和deep属性，具体可以参考[Vue.js中 watch 的高级用法](https://juejin.im/post/5ae91fa76fb9a07aa7677543),更标准的使用方式可以查阅官方文档。在本文例子中可以这样使用：
-```js
-watch: {
-  content:{
-    handler(newVal, oldVal) {
-      this.$emit('input', this.content)
-    },
-    deep: true // deep属性默认为false, 表示十分深度监听
+```html
+<script>
+  watch: {
+    content:{
+      handler(newVal, oldVal) {
+        this.$emit('input', this.content)
+      },
+      deep: true // deep属性默认为false, 表示十分深度监听
+    }
   }
-}
+</script>
 ```
 介绍完了子组件中数据的处理，接下来说一下父组件中如何使用。
 
 ## 父组件调用自定义组件
 前面已经定义了自定义组件，可以支持数据的双向绑定，父组件调用自定义子组件时可以像elementUI中的表单组件一样使用，示例如下：
-```js
+```html
 <template>
   <el-form :model="info" ref="form">
     <!-- 为简化类型，这里无关的字段都使用el-input -->
     <el-form-item prop="start_time" lable="start time">
-      <el-input v-model="info.start_time" />
+      <el-input v-model="info.start_time"/>
     </el-form-item>
     <el-form-item prop="end_time" lable="end time">
-      <el-input v-model="info.end_time" />
+      <el-input v-model="info.end_time"/>
     </el-form-item>
     <!-- 遍历数组，循环调用自定义子组件 -->
     <div v-for="(content, index) in info.items" v-show="(currentIndex - 1) === index" :key="index">

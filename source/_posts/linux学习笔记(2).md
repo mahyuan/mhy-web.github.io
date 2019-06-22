@@ -1,6 +1,6 @@
 ---
 title: linux 学习笔记（2）
-category: linux
+category: 后端
 tags:
 	- linux
 	- bash

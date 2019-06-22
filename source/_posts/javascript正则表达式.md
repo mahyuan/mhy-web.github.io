@@ -1,7 +1,7 @@
 ﻿---
 title:  javascript正则表达式
 date: 2017-08-13 10:36:21
-category:  javascript
+category:  前端
 tags:  [正则表达式, javascript]
 ---
 [转载地址](http://www.cnblogs.com/rubylouvre/archive/2010/03/09/1681222.html)

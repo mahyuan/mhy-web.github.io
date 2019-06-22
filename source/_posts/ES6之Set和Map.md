@@ -1,6 +1,6 @@
 ---
 title: ES6之Set和Map
-category: javascript
+category: 前端
 tags:
   - javascript
 date: 2018-03-08 15:28:03

@@ -1,7 +1,7 @@
 ﻿---
 title:  DOM操作总结
 date: 2017-08-02 10:36:21
-category: javascript
+category: 前端
 tags: [DOM, javascript]
 ---
 

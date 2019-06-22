@@ -1,6 +1,6 @@
 ---
 title: dispatchEvent的用法
-category: javascript
+category: 前端
 tags:
   - javascript
   - dispatchEvent
@@ -31,14 +31,14 @@ var fireEvent = function fireEvent(element,event){
 
         // initEvent接受3个参数：
         // 事件类型，是否冒泡，是否阻止浏览器的默认行为
-        evt.initEvent(event, true, true); 
+        evt.initEvent(event, true, true);
         return !element.dispatchEvent(evt);
     }
 };
 ```
 ## dispatchEvent 事件触发器
 
-* 早期的创建事件的方式： 
+* 早期的创建事件的方式：
 ```js
 var event = document.createEvent('Event'); // 一个参数， 表示事件类型
 event.initEvent('build', true, true); // 三个参数，eventName事件类型、canBubble是否冒泡、preventDefault是否阻止事件的默认操作
@@ -73,7 +73,7 @@ function handler(e) {
 document.addEventListener('haha', handler, false)
 function disPatchEvt(obj) {
 	evt.eventBody = obj
-	document.dispatchEvent(evt, obj)	
+	document.dispatchEvent(evt, obj)
 }
 disPatchEvt(obj)
 ```

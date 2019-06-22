@@ -1,9 +1,10 @@
 ---
 title: vuex学习笔记
-category: javascript
+category: 前端
 tags:
   - javascript
   - vuex
+  - vue
 date: 2018-05-09 19:37:39
 ---
 > vuex是为Vue应用开发的**状态管理模式**。
@@ -138,7 +139,7 @@ const store = new Vuex.Store({
         }
     }
 })
-``` 
+```
 Getter 会暴露为 store.getters 对象：
 ```js
 store.getters.doneTodos // -> [{ id: 1, text: '...', done: true }]
@@ -172,9 +173,9 @@ export default {
 ```js
 mapGetters([
     // 映射 `this.doneCount` 为 `store.getters.doneTodosCount`
-    doneCount: 'doneTodosCount'   
+    doneCount: 'doneTodosCount'
 ])
-``` 
+```
 
 ### Mutation
 更改 Vuex 的 store 中的状态的唯一方法是提交 mutation。Vuex 中的 mutation 非常类似于事件：每个 mutation 都有一个字符串的 **事件类型 (type)** 和 一个 **回调函数 (handler)**。这个回调函数就是我们实际进行状态更改的地方，并且它会接受 state 作为第一个参数：
@@ -266,7 +267,7 @@ const store = new Vuex.store({
 #### Mutation 必须是同步函数
 **mutation必须是同步函数**
 
-#### 在组件中提交 mutation 
+#### 在组件中提交 mutation
 在组件中使用 `this.$store.commit('xxx')` 提交 mutation ，或者使用 `mapMutation` 辅助函数将组件中的 methods 映射为 `store.commit` 调用（需要在根节点注入 `store`）。
 ```js
 import { mapMutations } from 'vuex'

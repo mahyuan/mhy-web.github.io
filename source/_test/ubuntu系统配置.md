@@ -1,7 +1,7 @@
 ---
 title: ubuntu系统配置
 date: 2018-03-21 11:15:12
-category: 操作系统
+category: linux
 tags:
 	- ubuntu
 	- 操作系统

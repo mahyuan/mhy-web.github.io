@@ -1,7 +1,7 @@
 ﻿---
 title:  meta标签总结与属性使用介绍
 date: 2017-07-10 10:36:21
-category:  html
+category:  前端
 tags: [html5, meta]
 ---
 
@@ -104,7 +104,7 @@ content的参数有all,none,index,noindex,follow,nofollow。默认是all。
 举例：
 ```html
 <!-- 默认webkit内核 -->
-<meta name="renderer" content="webkit"> 
+<meta name="renderer" content="webkit">
 <!-- 默认IE兼容模式 -->
 <meta name="renderer" content="ie-comp">
 <!-- 默认IE标准模式 -->
@@ -183,14 +183,14 @@ meta标签中http-equiv属性语法格式是：
 举例:
 ```html
 <!-- 意思是2秒后跳转向我的博客 -->
-<meta http-equiv="refresh" content="2；URL=http://www.lxxyx.win/"> 
+<meta http-equiv="refresh" content="2；URL=http://www.lxxyx.win/">
 ```
 ##### F. Set-Cookie(cookie设定)
 
 说明：如果网页过期。那么这个网页存在本地的cookies也会被自动删除。
 ```html
 <!-- 格式 -->
-<meta http-equiv="Set-Cookie" content="name, date"> 
+<meta http-equiv="Set-Cookie" content="name, date">
 <!-- 具体范例 -->
 <meta http-equiv="Set-Cookie" content="User=Lxxyx; path=/; expires=Sunday, 10-Jan-16 10:00:00 GMT">
 ```
@@ -219,8 +219,8 @@ viewport属性用于设置移动端页面是否可以缩放，具体配置项有
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 ```
-这两个会让网页内容以应用程序风格显示，并使状态栏透明。 
+这两个会让网页内容以应用程序风格显示，并使状态栏透明。
 
-[参考1](https://segmentfault.com/a/1190000004279791)  
+[参考1](https://segmentfault.com/a/1190000004279791)
 [参考2](http://blog.jayself.com/2014/03/22/meta/)
 

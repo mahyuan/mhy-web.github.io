@@ -1,7 +1,7 @@
 ---
 title: window对象之navigator
 date: 2018-02-24 11:22:09
-category: javascript
+category: 前端
 tags: [window, javascript]
 ---
 
@@ -57,24 +57,24 @@ function getExploreName(){
 ## 不常用属性
 - navigator.appCodeName
 返回当前浏览器的内部“代码”名称,该名称可能是不"正确"的.
-- navigator.buildID 
+- navigator.buildID
 返回当前浏览器的构建标识符 (例如: "2006090803").
 - navigator.connection
 提供有关设备的网络连接的信息.
 - navigator.cookieEnabled
 返回一个布尔值,表明当前浏览器是否启用了cookies.
-- navigator.doNotTrack 
+- navigator.doNotTrack
 返回用户配置中do-not-track项的值,如果值为"yes",则网站和应用程序不会跟踪用户.
 - navigator.id
 返回 `id` 对象,你可以用它来为自己的网站添加对BrowserID的支持.
 - navigator.mimeTypes
 返回当前浏览器支持的MIME类型列表.
-- navigator.mozBattery 
+- navigator.mozBattery
 返回一个battery 对象,你可以用它来获取自己电脑上的电池的电量情况.
-- navigator.mozNotification Mobile Only in Gecko 2.0 
+- navigator.mozNotification Mobile Only in Gecko 2.0
 - navigator.webkitNotification
 返回一个notification 对象,你可以用它来向使用你的web应用程序的用户发送通知.
-- navigator.mozTelephony Mobile Only in Gecko  
+- navigator.mozTelephony Mobile Only in Gecko
 返回一个DOMTelephony 对象,你可以用它来创建和管理手机通话.
 - navigator.onLine
 返回一个布尔值,表明当前浏览器是否正常联网.
@@ -82,31 +82,31 @@ function getExploreName(){
 返回一个字符串,表明当前所使用的操作系统类型.
 - navigator.plugins
 返回一个包含了浏览器中所有已安装的插件对象的数组.
-- navigator.product 
+- navigator.product
 返回当前浏览器的产品名称(例如: "Gecko").
-- navigator.productSub 
+- navigator.productSub
 返回当前浏览器的构建编号(例如: "20060909").
-- navigator.securitypolicy 
+- navigator.securitypolicy
 返回一个空字符串. 在Netscape 4.7x中, 返回"US & CA domestic policy" 或者 "Export policy".
-- navigator.vendor 
+- navigator.vendor
 返回当前浏览器的浏览器供应商名称, (例如: "Netscape6")
-- navigator.vendorSub 
+- navigator.vendorSub
 返回当前浏览器的浏览器供应商名称的版本号 (e.g. "6.1").
-- navigator.webkitPointer 
+- navigator.webkitPointer
 返回一个Mouse Lock API中的PointerLock对象.
 
 ## 方法
 - navigator.javaEnabled
 表明当前浏览器是否启用了对Java的支持.
-- navigator.mozIsLocallyAvailable 
+- navigator.mozIsLocallyAvailable
 检测一个URI资源在脱机状态是否可用.
-- navigator.preference 已废弃 Gecko 2.0 
+- navigator.preference 已废弃 Gecko 2.0
 设置一个用户配置. 该方法只能在特权代码中使用,目前已经废弃,你应该使用XPCOM Preferences API 来代替.
 - navigator.registerContentHandler
 允许网站将自己注册成为一个给定MIME类型的内容的处理程序.
 - navigator.registerProtocolHandler
 允许网站将自己注册成为一个给定协议的处理程序.
-- navigator.taintEnabled 已废弃 Gecko 1.7.8 已废弃 Gecko 9.0 
+- navigator.taintEnabled 已废弃 Gecko 1.7.8 已废弃 Gecko 9.0
 返回false. 表明浏览器是否支持taint/untaint功能.已在JavaScript 1.2中删除.
 - navigator.vibrate()
 如果设备支持震动(手机或其他),则触发设备震动.
