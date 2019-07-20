@@ -5,6 +5,15 @@ category: 数据库
 tags: [mongodb, 数据库]
 ---
 
+### 启动服务
+在mac下启动mongod服务时，如果读取默认配置文件的话直接执行`mongod`就行了，如果要添加其他配置可以添加对应的配置项，但是最合理的应该是读取配置文件且后台运行服务。
+使用 -f 或 --config 选项指定配置文件
+```bash
+mongod -f  /etc/mongod.conf &
+# 或
+mongod --config  /etc/mongod.conf &
+```
+
 ### 创建数据库
 如果存在则切换，不存在则创建
 ```
