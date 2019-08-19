@@ -11,4 +11,4 @@ db.json
 */hexo-theme-BlueLake
 themes/*
 package-lock.json
-yarn.lock
+# yarn.lock
