@@ -2,7 +2,7 @@
 title:  REM vs EM
 date: 2017-08-29 10:36:21
 category: 前端
-tags:  [css3, rem, em]
+tags:  [css, rem, em]
 ---
 
 网页字体排版的最佳实践之一就是使用相对单位，如rem和em.
