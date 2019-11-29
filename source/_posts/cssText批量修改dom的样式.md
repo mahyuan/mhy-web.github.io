@@ -21,6 +21,8 @@ element.style.color = 'red';
 MDN介绍:
 > The cssText property of the CSSStyleDeclaration interface returns or sets the text of the element's inline style declaration only. To be able to set a stylesheet rule dynamically, see Using dynamic styling information.
 
+<!-- more -->
+
 语法：
 ```js
 const element = this.$refs.target;
