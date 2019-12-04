@@ -12,3 +12,5 @@ db.json
 themes/*
 package-lock.json
 # yarn.lock
+
+deploy.sh
