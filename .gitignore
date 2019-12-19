@@ -9,7 +9,7 @@ db.json
 .vscode
 *.swp
 */hexo-theme-BlueLake
-themes/*
+# themes/*
 package-lock.json
 # yarn.lock
 

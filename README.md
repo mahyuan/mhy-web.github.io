@@ -102,8 +102,10 @@ hexo d
 改完之后文件
 ```jade
 if theme.busuanzi == true
-  script(src='http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
-
+  # 2019/1
+  # script(src='http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
+  # 2019/12
+  script(src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
 //- ...
 ```
 我把改完后的该文件存放在了`source/_data/after_footer.jade`文件内，在执行一键部署的shell文件中做了同步处理`config_sync.sh`。

@@ -1,0 +1,6 @@
+[submodule "themes/yelee"]
+	path = themes/yelee
+	url = git@github.com:mhy-web/yelee.git
+[submodule "themes/BlueLake"]
+	path = themes/BlueLake
+	url = git@github.com:mhy-web/BlueLake.git
