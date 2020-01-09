@@ -9,7 +9,7 @@
     "start": "npm run dev",
     "dev": "hexo server --debug",
     "build": "hexo clean && hexo generate && gulp",
-    "deploy": "hexo clean && hexo g && gulp && ./deploy.sh",
+    "deploy": "npm run build && ./deploy.sh",
     "upload": "./deploy.sh"
   },
   "dependencies": {
