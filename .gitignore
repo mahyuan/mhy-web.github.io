@@ -10,7 +10,7 @@ db.json
 *.swp
 */hexo-theme-BlueLake
 # themes/*
-package-lock.json
-# yarn.lock
+# package-lock.json
+yarn.lock
 
 deploy.sh
