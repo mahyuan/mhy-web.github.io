@@ -101,15 +101,15 @@ feed:
 # 自动生成sitemap
 sitemap:
   path: sitemap.xml
+  # rel: true
 baidusitemap:
-  path: baidusitemap.xml
+  path: sitemap_mhynet.xml
+  # rel: true
 
 
 ## Themes: https://hexo.io/themes/
-# theme: landscape
-# theme: BlueLake
-# theme: next
 theme: yelee
+# theme: BlueLake
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -147,7 +147,7 @@ jsonContent:
 # 使用了该统计，单还没有在页面上显示出来，页面上显示使用的是busuanzi，作为数据备份，leancloud统计暂时留着吧，万一busuanzi挂了可以切换过来
 # leancloud的配置不完整，所有并没有起作用，需要一个jade文件，引用leancloud的js文件，具体介绍会加入到readme文件
 leancloud_visitors:
-  enable: true
+  enable: false
   app_id: 72QKoBvyH9pQlyIlDCTEqQdi-gzGzoHsz
   app_key: J4r0oeQgJjCtAI48KADjsgHu
 

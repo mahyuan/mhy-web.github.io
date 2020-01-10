@@ -20,20 +20,21 @@
                     </span>
                 <% } %>
                 <% if (theme.visit_counter.site_visit && theme.visit_counter.page_visit) { %>
-                    <span>| </span>
+                    <span style="padding: 0 3px;">| </span>
                 <% } %>
                 <% if (theme.visit_counter.page_visit) { %>
                     <span id="busuanzi_container_page_pv" style='display:none'>
                         <span id="page-visit"  title="<%= __('visit_counter.page') %>"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
+                    <% if (theme.visit_counter.page_visit && theme.beian.enable) { %>
+                      <span style="padding: 0 3px;">|</span>
+                    <% } %>
+                    <% if (theme.beian.enable) { %>
+                      <a class="link" target="_blank" href="<%= theme.beian.link %>"><%= theme.beian.key %></a>
+                    <% } %>
                 <% } %>
             </div>
-        <% } %>
-        <% if (theme.beian.enable) { %>
-          <div id="beian">
-              <a class="link" target="_blank" href="http://www.beian.miit.gov.cn/">京ICP备19058010号</a>
-          </div>
         <% } %>
     </div>
 </footer>

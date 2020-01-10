@@ -5,6 +5,7 @@ var uglify = require('gulp-uglify');
 var htmlmin = require('gulp-htmlmin');
 var htmlclean = require('gulp-htmlclean');
 var imagemin = require('gulp-imagemin');
+var prettyData = require('gulp-pretty-data');
 var runSequence = require('run-sequence');
 
 gulp.task('minify-css', function () {
@@ -54,6 +55,21 @@ gulp.task('minify-images', function () {
     .pipe(gulp.dest('./public/images'))
 });
 
+// 压缩 sitemap.xml
+gulp.task('xml-minify', function() {
+  return gulp.src('./public/*.xml')
+    .pipe(prettyData({
+      type: 'minify',
+      preserveComments: false,
+      extensions: {
+        'xlf': 'xml',
+        'svg': 'xml'
+      }
+    }))
+    .pipe(gulp.dest('./public'))
+})
+
+
 gulp.task('default', function (cb) {
-  runSequence(['minify-html', 'minify-css', 'minify-js', 'minify-images'], cb);
+  runSequence(['minify-html','minify-css', 'minify-js', 'minify-images', 'xml-minify'], cb);
 });

@@ -90,6 +90,11 @@ show_count: false
 ## 是否在主页文章标题旁显示评论数（多说、Disqus）
 ## Add comment count after article title
 
+# 来必力(data-uid)
+livere:
+  on: true
+  data_uid: MTAyMC8zNDM1OS8xMDg5Ng== ## 来必力(data_uid)
+
 disqus:
   #on: true
   shortname:
@@ -110,10 +115,6 @@ youyan:
   # 是否开启友言评论，http://www.uyan.cc/index.php
   # id 中填写你的友言用户数字ID，注册后进入后台管理即可查看
   # 友言服务在 Web 环境下运行，普通本地环境无法查看，请部署后在线上测试。
-
-livere:
-  on: ture
-  uid: MTAyMC8zNDM1OS8xMDg5Ng==
 
 # >>> Style Customisation 样式自定义 <<<
 
@@ -258,15 +259,19 @@ share:
 
 # 百度、谷歌站长验证。填写 HTML 标签 content
 # Site Verification for Google and Baidu. HTML label content.
-baidu_site:
-google_site:
+baidu_site: baidu_verify_8Aiojs1MlP.html
+# baidu_site: baidu_verify_lbjgMfZjsA.html
+google_site: googlea7d29b39b2cf201e.html
 
 # Fill in Google Analytics tracking ID, #e.g. UA-XXXXX-X
 google_analytics: UA-155864731-1
 
 # 百度统计 http://sitecenter.baidu.com/sc-web/
 # 查看代码，填入 //hm.baidu.com/hm.js? 之后的内容
-baidu_tongji: W5jYGtw56zjlVrXG
+baidu_tongji: b641a697cd393c453dcbbdfe0fefc625
+# 百度站长的token， 调用方法：
+# http://data.zz.baidu.com/urls?site=mhynet.cn&token=W5jYGtw56zjlVrXG
+# baidu token: W5jYGtw56zjlVrXG
 
 # 不蒜子网站计数设置
 # http://ibruce.info/2015/04/04/busuanzi/
@@ -309,5 +314,5 @@ CDN:
 # 备案
 beian:
   enable: true
-  # key: 京ICP备19058010号 # 备案号
-  # link: http://www.beian.miit.gov.cn/ # 跳转到该地址
+  key: 京ICP备19058010号 # 备案号
+  link: http://www.beian.miit.gov.cn/ # 跳转到该地址
