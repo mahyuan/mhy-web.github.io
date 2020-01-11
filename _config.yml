@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: mhyuan的博客 # 标题
+title: shanks # 标题
 subtitle: 这里是我的学习日志。 # 副标题
 description: 这里是我的学习日志。
-kewwords: mhyuan博客, mhyuan, 博客, hexo, mhy, mhyuan, hexo+github
+kewwords: shanks, 博客, hexo, hexo+github
 author: mhyuan
 language: zh-CN
 timezone: Asia/Shanghai # 时区
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: 'https://mhynet.cn'
+url: https://mhynet.cn
 # url: http://mhy-web.gitee.io/mhy-web.github.io/
 root: /
 # permalink: :year/:month/:day/:title/
@@ -54,7 +54,7 @@ highlight:
   enable: true
   line_number: true
   auto_detect: true
-  tab_replace:
+  tab_replace: 2
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -111,6 +111,18 @@ baidusitemap:
 theme: yelee
 # theme: BlueLake
 
+# 主题的配置文件。在这里放置的配置会覆盖主题目录下的 _config.yml 中的配置
+theme_config:
+  beian:   # 备案
+    enable: true
+    key: 京ICP备19058010号 # 备案号
+    link: http://www.beian.miit.gov.cn/ # 跳转到该地址
+  baidu_tongji: b641a697cd393c453dcbbdfe0fefc625
+  google_analytics: UA-155864731-1
+  baidu_site: d3L7d33cpv # 百度验证重新验证了，使用html标签验证 <meta name="baidu-site-verification" content="d3L7d33cpv" /> 或文件验证 baidu_verify_d3L7d33cpv.html
+  google_site: googlea7d29b39b2cf201e.html
+
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
@@ -146,9 +158,9 @@ jsonContent:
 # add post views 增加阅读量  使用leancloud
 # 使用了该统计，单还没有在页面上显示出来，页面上显示使用的是busuanzi，作为数据备份，leancloud统计暂时留着吧，万一busuanzi挂了可以切换过来
 # leancloud的配置不完整，所有并没有起作用，需要一个jade文件，引用leancloud的js文件，具体介绍会加入到readme文件
-leancloud_visitors:
-  enable: false
-  app_id: 72QKoBvyH9pQlyIlDCTEqQdi-gzGzoHsz
-  app_key: J4r0oeQgJjCtAI48KADjsgHu
+# leancloud_visitors:
+#   enable: false
+#   app_id: 72QKoBvyH9pQlyIlDCTEqQdi-gzGzoHsz
+#   app_key: J4r0oeQgJjCtAI48KADjsgHu
 
 

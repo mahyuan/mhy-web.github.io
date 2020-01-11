@@ -3,6 +3,7 @@
 ```
 ./
 ├── BlueLake_theme_config_copy.yml
+|-----baidu_verify_d3L7d33cpv.html
 ├── baidu_config_script.html
 ├── baidu_config_script.jade
 ├── baidu_verify_8Aiojs1MlP.html
@@ -31,3 +32,4 @@ meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-sca
 
 百度站长和google分析的文件放在source目录下即可。
 
+百度验证采用html标签验证，新版验证code:  d3L7d33cpv

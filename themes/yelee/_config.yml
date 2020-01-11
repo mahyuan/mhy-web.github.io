@@ -132,7 +132,7 @@ base_font_size: 16  #px, 16 - 24
 color_scheme: yilia
 
 highlight_style:
-  #on: true
+  on: true
   inline_code: 1  # Value: 0 - 9 可选
   code_block: 1  # Value: 0 - 4
   # Set inline_code to style highlight text
@@ -141,8 +141,8 @@ highlight_style:
   # 通过 code_block 切换内置代码高亮配色主题
 
 blockquote_style:
-  #on: true
-  blockquote: 1  # Value: 0 - 7 可选
+  on: true
+  blockquote: 2  # Value: 0 - 7 可选
   # 自定义文章「引用部分」的样式
 
 # Headings Style | 标题风格
@@ -156,7 +156,7 @@ list_style: 1  # value: 0 - 12 可选
 left_col_width: 300
 
 # Copyright info. of post | 文末版权信息
-copyright: false
+copyright: true
 
 # Table of contents | 文章目录
 toc:
@@ -259,7 +259,8 @@ share:
 
 # 百度、谷歌站长验证。填写 HTML 标签 content
 # Site Verification for Google and Baidu. HTML label content.
-baidu_site: baidu_verify_8Aiojs1MlP.html
+baidu_site: d3L7d33cpv
+# baidu_site: baidu_verify_8Aiojs1MlP.html
 # baidu_site: baidu_verify_lbjgMfZjsA.html
 google_site: googlea7d29b39b2cf201e.html
 
