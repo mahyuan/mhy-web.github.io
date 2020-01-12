@@ -3,6 +3,7 @@ title: mongodb学习笔记
 date: 2018-07-04 10:36:21
 category: 数据库
 tags: [mongodb, 数据库]
+description: "mongodb数据库常用命令"
 ---
 
 ### 启动服务

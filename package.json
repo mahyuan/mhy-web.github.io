@@ -7,7 +7,7 @@
   },
   "scripts": {
     "start": "npm run dev",
-    "dev": "hexo clean && hexo server --debug",
+    "dev": "hexo server --debug",
     "build": "hexo clean && hexo generate && gulp",
     "deploy": "npm run build && ./deploy.sh",
     "upload": "./deploy.sh"

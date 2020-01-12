@@ -3,8 +3,10 @@ title: 登录注册实现逻辑
 date: 2017-12-28 13:45:52
 category: 前端
 tags: [登录注册]
+description: "常见登录注册实现逻辑"
 ---
-登录注册是开发中最常见的需求之一，几乎每一个应用都需要登录注册。登录注册有很多不同的实现方式，需要根据需求和实际情况而定。
+
+登录注册是开发中最常见的需求之一，几乎每一个应用都需要登录注册。登录注册有很多不同的实现方式，需要根据需求和实际情况而定。
 <!-- more -->
 ## 登录注册的目的
 ### 用户角度
@@ -22,7 +24,9 @@ tags: [登录注册]
 - 手机号注册
 - 第三方账户注册
 
-![三种登录方式比较](https://upload-images.jianshu.io/upload_images/1552658-ccf01dc360965fd7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
+<img src="//upload-images.jianshu.io/upload_images/1552658-ccf01dc360965fd7.jpg" height="200" alg="图片">
+
+
 **邮箱注册逻辑：**
 ①.不验证邮箱地址
 录入邮箱地址 ---> 注册成功

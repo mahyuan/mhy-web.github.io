@@ -119,8 +119,8 @@ theme_config:
     link: http://www.beian.miit.gov.cn/ # 跳转到该地址
   baidu_tongji: b641a697cd393c453dcbbdfe0fefc625
   google_analytics: UA-155864731-1
-  baidu_site: d3L7d33cpv # 百度验证重新验证了，使用html标签验证 <meta name="baidu-site-verification" content="d3L7d33cpv" /> 或文件验证 baidu_verify_d3L7d33cpv.html
-  google_site: googlea7d29b39b2cf201e.html
+  baidu_site: VJKBSS2rgO # 百度验证重新验证了，使用html标签验证 <meta name="baidu-site-verification" content="d3L7d33cpv" /> 或文件验证 baidu_verify_d3L7d33cpv.html
+  google_site: OsZIswr6btG3y1q87keqlXy3VucMbYU6pBbnDVtNOB8 # <meta name="google-site-verification" content="OsZIswr6btG3y1q87keqlXy3VucMbYU6pBbnDVtNOB8" />
 
 
 # Deployment

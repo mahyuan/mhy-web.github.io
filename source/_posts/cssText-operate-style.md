@@ -5,6 +5,7 @@ tags:
   - javascript
   - css
 date: 2019-11-26 11:09:34
+description: "使用cssText批量修改dom样式, 性能和兼容性都超级棒！"
 ---
 
 之前用js修改dom的样式一般都是采用以下的方式：
@@ -21,7 +22,6 @@ element.style.color = 'red';
 MDN介绍:
 > The cssText property of the CSSStyleDeclaration interface returns or sets the text of the element's inline style declaration only. To be able to set a stylesheet rule dynamically, see Using dynamic styling information.
 
-<!-- more -->
 
 语法：
 ```js

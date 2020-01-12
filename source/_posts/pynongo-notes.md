@@ -5,6 +5,7 @@ tags:
   - python
   - mongodb
 date: 2019-06-11 11:38:12
+description: "使用pymongo操作数据库，python爬虫常用数据库操作语句"
 ---
 
 前段时间学习了python爬虫，然后爬取了必应壁纸、拉钩、小红唇视频和评论等，其中也使用了mongodb数据库存储数据。

@@ -19,9 +19,3 @@ screen.availHeight 属性返回访问者屏幕的高度，以像素计，减去�
 |height|返回屏幕的总高度|
 |pixelDepth |返回屏幕的颜色分辨率（每象素的位数）|
 |width |返回屏幕的总宽度|
-
-
-
-
-
-

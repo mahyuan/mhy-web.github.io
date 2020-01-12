@@ -5,10 +5,14 @@ tags:
   - mysql
   - 数据库
 date: 2018-03-03 11:35:30
+description: "MySQL数据库初级应用指南。"
 ---
+
 MySQL数据库学习笔记。
 MySQL环境搭建可查阅资料，此处不细说。默认已搭建好MySQL环境。
+
 <!-- more -->
+
 ## 1.授权、登录相关
 ### 启动MySQL服务常用命令:
 * 启动mysql服务：sudo start mysql 或者 sudo service mysql start

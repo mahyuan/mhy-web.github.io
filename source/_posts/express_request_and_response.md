@@ -5,8 +5,10 @@ tags:
 	- javascript
 	- node
 date: 2018-12-25 21:37:53
+description: "express是基于Nodejs搭建的web应用框架，使用express可以快速搭建一个网站。"
 ---
-express是基于Node搭建web应用的框架，使用express可以快速的搭建一个网站，express的和核心功能有以下三点：
+
+express是基于Node搭建web应用的框架，使用express可以快速搭建一个网站，express的和核心功能有以下三点：
 - 可以设置中间件来响应 HTTP 请求。
 - 定义了路由表用于执行不同的 HTTP 请求动作。
 - 可以通过向模板传递参数来动态渲染 HTML 页面。

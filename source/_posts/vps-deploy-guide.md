@@ -4,7 +4,9 @@ category: vps
 tags:
   - vps
 date: 2019-09-23 16:00:56
+description: "vps搭建指南，实现科学上网"
 ---
+
 上周发现我的vps又被禁了，又得重新部署。
 每次部署vps都要google搜索相关命令，特别麻烦，这里记录一下搭建vps的简单步骤吧。
 

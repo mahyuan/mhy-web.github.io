@@ -3,7 +3,9 @@ title: 深浅拷贝方法总结
 date: 2018-02-21 16:45:52
 category: 前端
 tags: [深拷贝]
+description: 'javascript对象深浅拷贝方法总结。'
 ---
+
 ## 一.Javascript中的深浅拷贝由来：
 javascript中数据格式分为基本类型和引用类型，5种基本数据类型Undefined、Null、Boolean、Number 和 String，变量是直接按值存放的，存放在栈内存中的简单数据段，可以直接访问。
 <!-- more -->

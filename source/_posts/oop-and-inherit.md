@@ -3,6 +3,7 @@ title: 面向对象和继承
 date: 2018-01-19 13:48:35
 category: 前端
 tags: [面向对象, 继承]
+description: "javascript面向对象和继承相关特性"
 ---
 
 面向对象编程是目前最流行的编程方式之一。

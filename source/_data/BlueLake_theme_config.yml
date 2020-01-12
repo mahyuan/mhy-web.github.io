@@ -78,7 +78,8 @@ addToAny_share: # AddToAny share. Empty list hides. List items are service name 
 #  - email
 
 # Analytics
-google_analytics: ## Your Google Analytics tracking id, e.g. UA-42025684-2
+# <meta name="google-site-verification" content="OsZIswr6btG3y1q87keqlXy3VucMbYU6pBbnDVtNOB8" />
+google_analytics: UA-155864731-1  ## Your Google Analytics tracking id, e.g. UA-42025684-2
 baidu_analytics: W5jYGtw56zjlVrXG  ## Your Baidu Analytics tracking id, e.g. 1006843030519956000
 
 # Miscellaneous

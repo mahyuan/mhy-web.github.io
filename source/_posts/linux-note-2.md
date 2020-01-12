@@ -1,10 +1,11 @@
 ---
-title: linux 学习笔记（2）
+title: linux 学习笔记(2)
 category: 后端
 tags:
 	- linux
 	- bash
 date: 2018-08-20 13:26:13
+description: "linux学习笔记之shell编程"
 ---
 
 ### 1.shell 脚本
@@ -16,9 +17,10 @@ date: 2018-08-20 13:26:13
 
 shell文件的第一行的"#!"是一个约定的标记，告诉系统其后路径所指定的程序即是解释此脚本的shell程
 linux的shell种类常见的有：
+
 * Bourne Ageng Shell(/bin/bash)
 * Bourne Shell(/usr/bin/sh 或/bin/sh)
-* C Shell (/usr/bin/csh)
+* "C Shell" (/usr/bin/csh)
 * Shell for Root(/sbin/sh)
 
 ### 3.运行shell脚本

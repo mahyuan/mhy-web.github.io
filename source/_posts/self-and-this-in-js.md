@@ -1,5 +1,5 @@
 ---
-title: javascript的self和this使用小结
+title: 【转】javascript的self和this使用小结
 date: 2017-09-18 20:12:14
 category: 前端
 tags: [this, self, javascript]
@@ -306,4 +306,4 @@ void 操作符用法格式如下：
 这个问题网上有很多讨论，个人认为[“落叶满长沙”](http://www.cnblogs.com/litao229/archive/2009/06/23/1509379.html)总结的很有代表性，这里就不再赘述了。
 
 
-本文摘自 [http://www.cnblogs.com](http://www.cnblogs.com/reommmm/archive/2010/01/20/1652469.html)
+本文摘自 [javascript的self和this使用小结](http://www.cnblogs.com/reommmm/archive/2010/01/20/1652469.html)

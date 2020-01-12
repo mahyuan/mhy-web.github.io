@@ -1,11 +1,12 @@
 ---
-title: linux学习笔记(5) --定时任务
+title: linux学习笔记(5)
 category: 后端
 tags:
 	- linux
   - bash
   - crontab
 date: 2019-03-14 13:15:31
+description: "linux学习之定时任务"
 ---
 
 ## at 一次性定时任务

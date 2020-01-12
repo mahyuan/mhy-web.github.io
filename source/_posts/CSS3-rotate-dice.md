@@ -4,6 +4,9 @@ date: 2017-11-16 20:26:37
 category: 前端
 tags:
   - css
+  - 动画
+  - transform
+description: "css旋转动画，转不停的骰子"
 ---
 - [最终效果](http://mhynet.cn/HomeWorks/projects/3D_transform/index.html)
 - [参考代码](https://github.com/mhy-web/HomeWorks/blob/master/projects/3D_transform/index.html)

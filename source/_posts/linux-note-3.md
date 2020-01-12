@@ -1,11 +1,14 @@
 ---
-title: linux学习笔记(3)
+title: linux 学习笔记(3)
 category: 后端
 tags:
 	- linux
 	- bash
 date: 2018-09-11 18:12:07
+description: "linux学习笔记之常用命令。"
 ---
+
+linux中常用的命令使用笔记。
 
 ## echo 命令
 > echo [选项] [输出内容]

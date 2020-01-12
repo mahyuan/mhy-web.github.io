@@ -259,10 +259,8 @@ share:
 
 # 百度、谷歌站长验证。填写 HTML 标签 content
 # Site Verification for Google and Baidu. HTML label content.
-baidu_site: d3L7d33cpv
-# baidu_site: baidu_verify_8Aiojs1MlP.html
-# baidu_site: baidu_verify_lbjgMfZjsA.html
-google_site: googlea7d29b39b2cf201e.html
+baidu_site: VJKBSS2rgO
+google_site: OsZIswr6btG3y1q87keqlXy3VucMbYU6pBbnDVtNOB8
 
 # Fill in Google Analytics tracking ID, #e.g. UA-XXXXX-X
 google_analytics: UA-155864731-1

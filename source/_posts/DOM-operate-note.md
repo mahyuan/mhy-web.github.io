@@ -9,11 +9,12 @@ tags: [DOM, javascript]
 
 DOM 提供了一种表述形式将文档作为一个结构化的节点组以及包含属性和方法的对象。从本质上说，它将web 页面和脚本或编程语言连接起来了。
 
+<!-- more -->
+
 ![DOM](http://www.w3school.com.cn/i/ct_htmltree.gif)
 
 要改变页面的某个东西，JavaScript就需要获得对HTML文档中所有元素进行访问的入口。这个入口，连同对 HTML 元素进行添加、移动、改变或移除的方法和属性，都是通过DOM来获得的
 
-<!-- more -->
 
 ## document 对象
 
