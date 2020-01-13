@@ -14,6 +14,7 @@
                 z-index: 99;
             }
         }
+        #header-mobile,
         #header{
             padding: 10px 0 0 0;
             .profilepic{
@@ -70,7 +71,7 @@
     }
 
     @media screen and (max-width:1040px) {
-        
+
     }@media screen and (max-width:800px) {
         @import "_partial/mobile"
     }
@@ -82,6 +83,7 @@
     font-size: base-font-size + 14;
     transition: 0.3s;
 }
+#header-mobile,
 #header{
     width:100%;
     a {
@@ -119,7 +121,7 @@
             border: 5px solid #88acdb;
             box-shadow: 0 0 1.5em #88acdb;
             animation: profilepic .15s linear infinite alternate;
-            -webkit-animation: profilepic .15s linear infinite alternate; 
+            -webkit-animation: profilepic .15s linear infinite alternate;
         }
         @keyframes profilepic {
             0% {
@@ -252,7 +254,7 @@
             color: rgba(255, 255, 255, .8);
         }
         &:hover {
-            background: rgba(147, 181, 224, .3) !important; 
+            background: rgba(147, 181, 224, .3) !important;
             .fa {
                 color: white;
             }
@@ -281,7 +283,7 @@
     -webkit-appearance: none;
     &:hover {
         color: #88acdb;
-        opacity: 1; 
+        opacity: 1;
     }
 }
 
@@ -326,7 +328,7 @@ if hexo-config("github_widget")
     .article-entry .github-widget
         h3::after
             content none
-        .github-box 
+        .github-box
             font-size (13/16)rem
             .github-box-title
                 h3
@@ -350,14 +352,14 @@ if hexo-config("jquery_ui")
 
     body .ui-tooltip
         border 1px solid white
-        
+
 
 if hexo-config("progressBar.on") && hexo-config("progressBar.type") == "minimal"
         bar-color = hexo-config("progressBar.color")
         if bar-color == "blue"
             .pace .pace-progress
                 background #77b6ff
-                box-shadow 0 0 10px rgba(@background, .7) 
+                box-shadow 0 0 10px rgba(@background, .7)
 
 .article-entry ul > li,
 .share,
