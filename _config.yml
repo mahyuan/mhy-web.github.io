@@ -101,11 +101,8 @@ feed:
 # 自动生成sitemap
 sitemap:
   path: sitemap.xml
-  # rel: true
 baidusitemap:
   path: sitemap_mhynet.xml
-  # rel: true
-
 
 ## Themes: https://hexo.io/themes/
 theme: yelee

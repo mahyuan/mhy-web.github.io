@@ -8,14 +8,14 @@
 <meta name="format-detection" content="telephone=no" />
 <meta name="author" content="<%= config.author %>" />
 
-<% if (is_home()){ %>
-    <% if (theme.baidu_site) { %> 
+<!-- <% if (is_home()){ %> -->
+    <% if (theme.baidu_site) { %>
         <meta name="baidu-site-verification" content="<%- theme.baidu_site %>" />
     <% } %>
-    <% if (theme.google_site) { %> 
+    <% if (theme.google_site) { %>
         <meta name="google-site-verification" content="<%- theme.google_site %>" />
     <% } %>
-<% } %>
+<!-- <% } %> -->
 
 <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
 
@@ -107,7 +107,7 @@ if ( is_archive() ) {
         (function() {
             var hm = document.createElement("script");
             hm.src = "//hm.baidu.com/hm.js?<%=theme.baidu_tongji%>";
-            var s = document.getElementsByTagName("script")[0]; 
+            var s = document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(hm, s);
         })();
     </script>

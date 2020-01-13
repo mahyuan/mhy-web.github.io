@@ -1,9 +1,0 @@
-about
-archives
-background
-categories
-css
-img
-js
-page
-tags
