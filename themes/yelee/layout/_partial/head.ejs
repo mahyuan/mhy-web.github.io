@@ -7,16 +7,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="format-detection" content="telephone=no" />
 <meta name="author" content="<%= config.author %>" />
-
-<!-- <% if (is_home()){ %> -->
-    <% if (theme.baidu_site) { %>
-        <meta name="baidu-site-verification" content="<%- theme.baidu_site %>" />
-    <% } %>
-    <% if (theme.google_site) { %>
-        <meta name="google-site-verification" content="<%- theme.google_site %>" />
-    <% } %>
-<!-- <% } %> -->
-
+<% if (theme.baidu_site) { %>
+    <meta name="baidu-site-verification" content="<%- theme.baidu_site %>" />
+<% } %>
+<% if (theme.google_site) { %>
+    <meta name="google-site-verification" content="<%- theme.google_site %>" />
+<% } %>
 <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
 
 <link rel="apple-touch-icon" href= "<%- theme.root_url %>/apple-touch-icon.png">
