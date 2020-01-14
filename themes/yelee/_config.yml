@@ -90,9 +90,30 @@ show_count: false
 ## 是否在主页文章标题旁显示评论数（多说、Disqus）
 ## Add comment count after article title
 
+
+# gitalk
+gitalk:
+  enable: true
+  shortname:
+  owner: mhy-web # github 账户名
+  admin: ['mhy-web']
+  repo: blog-comment # 用来存放 issue 评论的仓库名（注意只需要写仓库名，不需要写完整的仓库地址）
+  client_id: a717b97f95436ae1fce1
+  client_secret: c864f5e20f3057474ae80373e63dfa405d552c57
+
+
+# gitment
+gitment:
+  # enable: true
+  owner: mhy-web # github 账户名
+  repo: blog-comment # 用来存放 issue 评论的仓库名（注意只需要写仓库名，不需要写完整的仓库地址）
+  client_id: a717b97f95436ae1fce1
+  client_secret: c864f5e20f3057474ae80373e63dfa405d552c57
+  shortname:
+
 # 来必力(data-uid)
 livere:
-  on: true
+  # on: true
   data_uid: MTAyMC8zNDM1OS8xMDg5Ng== ## 来必力(data_uid)
 
 disqus:
@@ -122,7 +143,7 @@ youyan:
 ## "5": show images form bg-1.jpg to bg-5.jpg in `/yelee/source/background/`
 ## "5": 显示`/yelee/source/background/`文件夹中 bg-1.jpg 到 bg-5.jpg 这5张图片
 ## "0": white-gray background | 淳朴灰白背景
-background_image: 5
+background_image: 0
 
 # Base Font Size | 字号调节
 base_font_size: 16  #px, 16 - 24

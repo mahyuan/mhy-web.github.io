@@ -85,6 +85,14 @@
         <%- partial('comments/disqus', {
             shortname: config.disqus_shortname
           }) %>
+    <% } else if(theme.gitalk.enable) { %>
+          <%- partial('comments/gitalk', {
+            shortname: theme.gitalk.shortname
+          }) %>
+    <% } else if(theme.gitment.enable) { %>
+      <%- partial('comments/gitment', {
+            shortname: theme.gitment.shortname
+          }) %>
     <% } %>
 <% } %>
 
