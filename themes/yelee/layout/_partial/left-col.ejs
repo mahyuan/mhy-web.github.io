@@ -2,7 +2,7 @@
 <div class="intrude-less">
     <header id="header" class="inner">
         <a href="<%= config.root %>" class="profilepic">
-            <img src="<%- theme.root_url %><%=theme.avatar%>" class="animated zoomIn" alt="头像">
+            <img src="<%- theme.root_url %><%=theme.avatar%>" class="animated zoomIn">
         </a>
         <hgroup>
           <h1 class="header-author"><a href="<%= config.root %>"><%=theme.author%></a></h1>
@@ -46,7 +46,7 @@
                         </div>
                         <%}%>
                     </div>
-
+                    
                 </div>
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
@@ -82,7 +82,7 @@
                         </ul>
                     </nav>
                 </section>
-
+                
                 <%if(theme.tagcloud){%>
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
@@ -90,7 +90,7 @@
                     </div>
                 </section>
                 <%}%>
-
+                
                 <%if(theme.friends && theme.friends.length != 0){%>
                 <section class="switch-part switch-part3">
                     <div id="js-friends">
@@ -112,5 +112,5 @@
                 <%}%>
             </div>
         </div>
-    </header>
+    </header>                
 </div>

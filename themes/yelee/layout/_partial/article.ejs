@@ -81,10 +81,10 @@
         <%- partial('comments/disqus', {
             shortname: theme.disqus.shortname
           }) %>
-    <% } else if(theme.valine.enable) { %>
-      <%- partial('comments/valine', {
-          shortname: config.disqus_shortname
-        }) %>
+    <% } else if (config.disqus_shortname) { %>
+        <%- partial('comments/disqus', {
+            shortname: config.disqus_shortname
+          }) %>
     <% } %>
 <% } %>
 

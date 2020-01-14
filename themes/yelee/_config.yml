@@ -92,7 +92,7 @@ show_count: false
 
 # 来必力(data-uid)
 livere:
-  # on: true
+  on: true
   data_uid: MTAyMC8zNDM1OS8xMDg5Ng== ## 来必力(data_uid)
 
 disqus:
@@ -115,21 +115,6 @@ youyan:
   # 是否开启友言评论，http://www.uyan.cc/index.php
   # id 中填写你的友言用户数字ID，注册后进入后台管理即可查看
   # 友言服务在 Web 环境下运行，普通本地环境无法查看，请部署后在线上测试。
-
-# Valine：一款基于Leancloud的无后端评论系统
-valine:
-  enable: true  # Valine 启用状态
-  app_id: 72QKoBvyH9pQlyIlDCTEqQdi-gzGzoHsz
-  app_key: J4r0oeQgJjCtAI48KADjsgHu
-  placeholder: ヾﾉ≧∀≦)o来啊，快活啊！  # 占位显示内容
-  size: 10  # 每次显示的评论数量
-
-# leancloud 阅读量
-leancloud_visitors:
-  enable: false
-  app_id: 72QKoBvyH9pQlyIlDCTEqQdi-gzGzoHsz
-  app_key: J4r0oeQgJjCtAI48KADjsgHu
-
 
 # >>> Style Customisation 样式自定义 <<<
 
