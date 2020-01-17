@@ -22,6 +22,6 @@ for file in $files; do
   fi
 done
 
+cat urls.txt
 
 curl -H 'Content-Type:text/plain' --data-binary @urls.txt "http://data.zz.baidu.com/urls?site=https://mhynet.cn&token=W5jYGtw56zjlVrXG"
-
