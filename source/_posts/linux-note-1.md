@@ -1,5 +1,5 @@
 ---
-title: linux 学习笔记(1)
+title: linux学习笔记(1)
 category: 后端
 tags:
 	- linux
