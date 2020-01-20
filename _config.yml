@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: shanks # 标题
-subtitle: 这里是我的学习日志。 # 副标题
-description: 这里是我的学习日志。
-kewwords: shanks, 博客, hexo, hexo+github
-author: mhyuan
+title: shanks的学习日志 # 标题
+subtitle: shanks的学习日志 # 副标题
+description: 这里记录了我的学习日志。
+kewwords: shanks, 博客, mhyuan,mahy, hexo, hexo+github
+author: shanks
 language: zh-CN
 timezone: Asia/Shanghai # 时区
 
