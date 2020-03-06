@@ -94,12 +94,10 @@ show_count: false
 # Valine
 # For more information: https://valine.js.org, https://github.com/xCss/Valine
 valine:
-  enable: false
+  enable: true
   appid: 1uREIRKwLhE57mcQ4jvraPBz-gzGzoHsz
   appkey: un7Isus45xOrp3Ih2zgfSNDr
-  # appid: # Your leancloud application appid
-  # appkey: # Your leancloud application appkey
-  notify: false # Mail notifier
+  notify: true # Mail notifier
   verify: false # Verification code
   placeholder: Just go go # Comment box placeholder
   avatar: mm # Gravatar style
@@ -108,8 +106,8 @@ valine:
   language: # Language, available values: en, zh-cn
   visitor: false # Article reading statistic
   comment_count: true # If false, comment count will only be displayed in post page, not in home page
-  recordIP: false # Whether to record the commenter IP
-  serverURLs: # When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)
+  recordIP: true # Whether to record the commenter IP
+  serverURLs: https://1ureirkw.lc-cn-n1-shared.com # When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)
   #post_meta_order: 0
 
 
@@ -132,7 +130,7 @@ leancloud_visitors:
 
 # gitalk
 gitalk:
-  enable: true
+  # enable: true
   shortname:
   owner: mhy-web # github 账户名
   admin: ['mhy-web']
@@ -369,8 +367,7 @@ CDN:
   mathjax: //cdn.bootcss.com/mathjax/2.6.1/MathJax.js
   scrollreveal: //cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js
   busuanzi: //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
-  # av: leancloud
-  av: //cdn1.lncld.net/static/js/2.5.0/av-min.js
+  av: //cdn1.lncld.net/static/js/2.5.0/av-min.js  # av: leancloud
   valine: //unpkg.com/valine/dist/Valine.min.js
 
 

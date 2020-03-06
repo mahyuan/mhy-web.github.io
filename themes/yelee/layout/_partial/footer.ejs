@@ -9,10 +9,16 @@
                 <a href="http://hexo.io/" target="_blank" title="<%= __('tooltip.Hexo') %>">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="<%= __('tooltip.Yelee') %>  v<%= theme.Yelee %>">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
-        <% if (theme.visit_counter.on) { %>
-          <%- partial('post/busuanzi_visitor') %>
-        <% } else if (theme.leancloud_visitors.enable){ %>
-          <%- partial('post/leancloud_visitor') %>
-        <% } %>>
+        <div class="footer-center">
+          <% if (theme.visit_counter.on) { %>
+            <%- partial('post/busuanzi_visitor') %>
+          <% } %>
+          <% if (theme.leancloud_visitors.enable){ %>
+            <%- partial('post/leancloud_visitor') %>
+          <% } %>
+          <% if (theme.beian.enable) { %>
+            <a id="beian" class="link" target="_blank" href="<%= theme.beian.link %>"><%= theme.beian.key %></a>
+          <% } %>
+        </div>
     </div>
 </footer>
