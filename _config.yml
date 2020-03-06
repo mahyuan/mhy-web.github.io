@@ -157,7 +157,7 @@ jsonContent:
 # leancloud的配置不完整，所有并没有起作用，需要一个jade文件，引用leancloud的js文件，具体介绍会加入到readme文件
 # leancloud_visitors:
 #   enable: false
-#   app_id: 72QKoBvyH9pQlyIlDCTEqQdi-gzGzoHsz
-#   app_key: J4r0oeQgJjCtAI48KADjsgHu
+#   app_id:
+#   app_key:
 
 

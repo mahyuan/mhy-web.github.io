@@ -124,12 +124,72 @@
   box-shadow: 3px 2px 8px rgba(0,0,0, .07);
 }
 .article-header{
-  border-left: 6px solid #eee;
-  padding: 15px 8.2em 15px 25px;
+  display flex;
+  justify-content: space-between;
+  padding: 15px 15px 15px 25px;
+  border-left: 5px solid #666;
+  // h1 {
+  //   padding-right: 2em;
+  // }
   &:hover {
     border-left: 5px solid #9c9;
   };
+
 }
+.article-tittle-h1 {
+  padding-right: 2em;
+}
+.article-title-right {
+  display: flex;
+  justify-content: flex-end;
+  line-height: 25px;
+  .post_visits {
+    display: inline-block;
+    font-size 0.875rem
+    color: #aaa;
+    z-index 1;
+    @media screen and (min-width: 600) {
+      .post-meta-item-text {
+        display: none;
+      }
+    }
+  }
+}
+.article-meta {
+  display: flex;
+  width 7rem
+  padding-right .2rem
+  font-size 0.875rem
+  padding-left: 1.2rem;
+  text-align right
+  z-index 1
+  time {
+      color #aaa
+      float right
+      &:before {
+          margin-top 0px
+          margin-right 4px
+          content "\f073"
+          font 1em FontAwesome
+          color #999
+        }
+  }
+  a:nth-child(2) {
+      clear right
+      float right
+      padding-top .45rem
+      color #999
+      &:hover {
+          color #258fb8
+          font-size 110%
+      }
+      i {
+          vertical-align top
+      }
+
+  }
+}
+
 .article-info {
   li:hover {
     background: none;
@@ -235,35 +295,6 @@
     }
   }
 }
-
-.article-meta
-    position absolute
-    right 0
-    top 23px
-    width 9rem
-    padding-right 1.2rem
-    font-size 0.875rem
-    text-align right
-    z-index 1
-    time
-        color #aaa
-        float right
-        &:before
-            margin-top 0px
-            margin-right 4px
-            content "\f073"
-            font 1em FontAwesome
-            color #999
-    a:nth-child(2)
-        &:hover
-            color #258fb8
-            font-size 110%
-        i
-            vertical-align top
-        clear right
-        float right
-        padding-top .45rem
-        color #999
 
 .article-more-link {
     float: right;
@@ -404,7 +435,7 @@ li:hover {
     }
 }
 
-aside.comment-bar
+aside.comment-bar {
     display block
     cursor pointer
     background rgba(white, .3)
@@ -412,12 +443,17 @@ aside.comment-bar
     box-shadow 3px 2px 8px rgba(black, .07)
     text-align center
     font-size 2rem
-    i.fa-spinner
+    i.fa-spinner {
         display none
-    a
+    }
+    a {
         display inline-block
         width 3em
-        span
+        span {
             font-size 1.5rem
-    &:active
+        }
+    }
+    &:active {
         background none
+    }
+}

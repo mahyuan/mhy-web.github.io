@@ -1,9 +1,4 @@
 <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
-  <%if(post.noDate != "true"){%>
-    <div class="article-meta">
-      <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
-    </div>
-  <%}%>
   <div class="article-inner">
     <% if (theme.fancybox){ %>
       <input type="hidden" class="isFancy" />
@@ -11,6 +6,25 @@
     <% if (post.link || post.title){ %>
       <header class="article-header">
         <%- partial('post/title', {class_name: 'article-title'}) %>
+        <div class="article-title-right">
+          <% if(theme.leancloud_visitors.enable) { %>
+            <div class="post_visits">
+              <div id="<%- url_for(post.path) %>" class="leancloud_visitors"
+                data-flag-title="<%= post.title %>">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-eye" aria-hidden="true"></i>
+                </span>
+                <span class="post-meta-item-text"><%= __('visit_counter.page') %>:</span>
+                <span class="lean_value_page_pv"><%= post.visitors %></span>
+              </div>
+            </div>
+          <% } %>
+          <% if(post.noDate != "true") { %>
+            <div class="article-meta">
+              <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+            </div>
+          <% } %>
+        </div>
       </header>
       <% if (!index){ %>
       <div class="article-info article-info-post">
@@ -100,7 +114,7 @@
 
 <% if (!index) { %>
     <script>
-        <% if (post.fancybox === false){ %>
+        <% if (post.fancybox === false) { %>
             yiliaConfig.fancybox = false;
         <% } %>
     </script>
