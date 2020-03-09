@@ -6,7 +6,7 @@
     "version": "3.9.0"
   },
   "scripts": {
-    "start": "npm run dev",
+    "start": "hexo generate --watch",
     "dev": "hexo server --debug",
     "build": "hexo clean && hexo generate && gulp",
     "deploy": "npm run build && ./deploy.sh",

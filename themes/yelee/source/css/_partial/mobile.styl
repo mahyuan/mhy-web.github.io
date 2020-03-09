@@ -27,11 +27,15 @@
 .overlay{
     .slider-trigger{
         position: absolute;
+        display: none;
+        width: 0;
+        height: 0;
+        // display: block;
+        // width: 42px;
+        // height: 42px;
         z-index: 101;
         bottom: 0;
         left: 0;
-        width: 42px;
-        height: 42px;
         &:hover{
             background: #444;
         }
@@ -86,7 +90,7 @@
     .article-title{
         display: block;
         margin: 0;
-        font-size 1.5rem
+        font-size 1.2rem
         font-weight bold
     }
     .article-meta{
@@ -111,7 +115,7 @@
         margin-right: 0;
     }
     .article-info {
-    display: none;
+      display: none;
     }
 }
 
@@ -320,3 +324,22 @@ if hexo-config("github_widget")
 // Tags Cloud Page
 .tags a
     line-height 45px
+
+
+.leancloud_visitors {
+  white-space nowrap;
+}
+.post-meta-item-text {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+#footer {
+  height: 60px;
+}
+.footer-center {
+  bottom: -22px;
+  .site-count-content {
+    }
+}
