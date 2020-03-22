@@ -197,3 +197,8 @@ SEO优化参考了[这篇文章](https://juejin.im/post/590b451a0ce46300588c43a0
 解析时类型为A,记录值为以上ip中的一个，最好添加四条A记录，把以上ip都进行解析。
 
 这里记录这几个ip是为了避免以后再次解析至github pages时找不到，因为我有自己的ecs主机啦，解析服务器上要删除这几个ip的记录了。
+
+
+  <script type="text/javascript">
+    AV.initialize("<%- theme.leancloud_visitors.app_id %>", "<%- theme.leancloud_visitors.app_key %>");
+  </script>

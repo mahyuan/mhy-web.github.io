@@ -14,20 +14,24 @@ timezone: Asia/Shanghai # 时区
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://mhynet.cn
+host: mhynet.cn
 # url: http://mhy-web.gitee.io/mhy-web.github.io/
 root: /
 # permalink: :year/:month/:day/:title/
 # 优化SEO，减少URL层级结构
 permalink: :title.html
 permalink_defaults:
+pretty_urls:
+  trailing_index: true # 是否在永久链接中保留尾部的 index.html，设置为 false 时去除
+  trailing_html: true # 是否在永久链接中保留尾部的 .html, 设置为 false 时去除 (对尾部的 index.html无效)
 
 # Directory
-source_dir: source
-public_dir: public
-tag_dir: tags
-archive_dir: archives
-category_dir: categories
-code_dir: downloads/code
+source_dir: source # 资源文件夹，这个文件夹用来存放内容
+public_dir: public # 公共文件夹，这个文件夹用于存放生成的站点文件
+tag_dir: tags # 标签文件夹
+archive_dir: archives # 归档文件夹
+category_dir: categories # 分类文件夹
+code_dir: downloads/code # Include code 文件夹，source_dir 下的子目录
 i18n_dir: lang
 #跳过source目录下文件的编译, 跳过指定文件的渲染，可使用glob表达式来匹配路径。
 skip_render:
@@ -151,13 +155,4 @@ jsonContent:
     excerpt: false
     categories: false
     tags: true
-
-# add post views 增加阅读量  使用leancloud
-# 使用了该统计，单还没有在页面上显示出来，页面上显示使用的是busuanzi，作为数据备份，leancloud统计暂时留着吧，万一busuanzi挂了可以切换过来
-# leancloud的配置不完整，所有并没有起作用，需要一个jade文件，引用leancloud的js文件，具体介绍会加入到readme文件
-# leancloud_visitors:
-#   enable: false
-#   app_id: 72QKoBvyH9pQlyIlDCTEqQdi-gzGzoHsz
-#   app_key: J4r0oeQgJjCtAI48KADjsgHu
-
 

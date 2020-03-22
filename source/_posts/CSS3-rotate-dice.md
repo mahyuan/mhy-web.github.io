@@ -8,9 +8,7 @@ tags:
   - transform
 description: "css旋转动画，转不停的骰子"
 ---
-- [最终效果](http://mhynet.cn/HomeWorks/projects/3D_transform/index.html)
-- [参考代码](https://github.com/mhy-web/HomeWorks/blob/master/projects/3D_transform/index.html)
-按照以下步骤就可以实现。
+- [最终效果](https://h5.mhynet.cn/3D_transform/index.html)
 
 ### 1.建立容器和6个面:
 

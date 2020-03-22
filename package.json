@@ -6,7 +6,7 @@
     "version": "3.9.0"
   },
   "scripts": {
-    "start": "npm run dev",
+    "start": "hexo generate --watch",
     "dev": "hexo server --debug",
     "build": "hexo clean && hexo generate && gulp",
     "deploy": "npm run build && ./deploy.sh",
@@ -25,6 +25,7 @@
     "hexo-generator-search": "^2.4.0",
     "hexo-generator-sitemap": "^1.2.0",
     "hexo-generator-tag": "^0.2.0",
+    "hexo-incremental-id": "^0.1.2",
     "hexo-renderer-ejs": "^0.3.0",
     "hexo-renderer-jade": "0.3.0",
     "hexo-renderer-marked": "^0.3.0",
