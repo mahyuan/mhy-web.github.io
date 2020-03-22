@@ -91,9 +91,46 @@ show_count: false
 ## Add comment count after article title
 
 
+# Valine
+# For more information: https://valine.js.org, https://github.com/xCss/Valine
+valine:
+  enable: true
+  appid: 1uREIRKwLhE57mcQ4jvraPBz-gzGzoHsz
+  appkey: un7Isus45xOrp3Ih2zgfSNDr
+  notify: true # Mail notifier
+  verify: false # Verification code
+  placeholder: Just go go # Comment box placeholder
+  avatar: mm # Gravatar style
+  guest_info: nick,mail,link # Custom comment header
+  pageSize: 10 # Pagination size
+  language: # Language, available values: en, zh-cn
+  visitor: false # Article reading statistic
+  comment_count: true # If false, comment count will only be displayed in post page, not in home page
+  recordIP: true # Whether to record the commenter IP
+  serverURLs: https://1ureirkw.lc-cn-n1-shared.com # When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)
+  #post_meta_order: 0
+
+
+
+# Show number of visitors of each article.
+# You can visit https://leancloud.cn to get AppID and AppKey.
+# AppID and AppKey are recommended to be the same as valine's for counter compatibility.
+# Do not enable both `valine.visitor` and `leancloud_visitors`.
+leancloud_visitors:
+  enable: true
+  app_id: 1uREIRKwLhE57mcQ4jvraPBz-gzGzoHsz
+  app_key: un7Isus45xOrp3Ih2zgfSNDr
+  serverURLs: https://1ureirkw.lc-cn-n1-shared.com
+  # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
+  # If you don't care about security in leancloud counter and just want to use it directly
+  # (without hexo-leancloud-counter-security plugin), set `security` to `false`.
+  security: true
+  betterPerformance: false
+
+
 # gitalk
 gitalk:
-  enable: true
+  # enable: true
   shortname:
   owner: mhy-web # github 账户名
   admin: ['mhy-web']
@@ -297,7 +334,7 @@ baidu_tongji: b641a697cd393c453dcbbdfe0fefc625
 # http://ibruce.info/2015/04/04/busuanzi/
 # https://busuanzi.ibruce.info/
 visit_counter:
-  on: true
+  # on: true
   site_visit: true
   page_visit: true
 
@@ -330,6 +367,9 @@ CDN:
   mathjax: //cdn.bootcss.com/mathjax/2.6.1/MathJax.js
   scrollreveal: //cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js
   busuanzi: //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
+  av: //cdn1.lncld.net/static/js/2.5.0/av-min.js  # av: leancloud
+  valine: //unpkg.com/valine/dist/Valine.min.js
+
 
 # 备案
 beian:

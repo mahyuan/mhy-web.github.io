@@ -1,5 +1,5 @@
 {
-  "name": "hexo-site",
+  "name": "mhynet.cn",
   "version": "1.0.0",
   "private": true,
   "hexo": {
@@ -13,8 +13,6 @@
     "upload": "./deploy.sh"
   },
   "dependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
     "gitment": "^0.0.3",
     "hexo": "^3.6.0",
     "hexo-deployer-git": "^0.3.1",
@@ -41,6 +39,8 @@
     "run-sequence": "^2.2.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^8.0.0",
     "gulp-htmlclean": "^2.7.22",

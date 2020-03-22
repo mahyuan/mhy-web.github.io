@@ -18,7 +18,6 @@ description: "css旋转动画，转不停的骰子"
   `<div class="content"></div>`是6个面的父容器，限制6个面的大小和位置。同时，旋转动画也设置在该容器上。
 
 <!-- more -->
-
 ```html
 <div class="wrap">
   <div class="content">
