@@ -19,6 +19,7 @@ gulp.task('minify-html', function () {
     .pipe(htmlclean())
     .pipe(htmlmin({
       removeComments: true,
+      collapseWhitespace: true,
       minifyJS: true,
       minifyCSS: true,
       minifyURLs: true,
@@ -71,5 +72,5 @@ gulp.task('xml-minify', function() {
 
 
 gulp.task('default', function (cb) {
-  runSequence(['minify-html','minify-css', 'minify-js', 'minify-images', 'xml-minify'], cb);
+  runSequence(['minify-html','minify-css','minify-js','minify-images','xml-minify'], cb);
 });

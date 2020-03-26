@@ -25,7 +25,6 @@
     "hexo-generator-search": "^2.4.0",
     "hexo-generator-sitemap": "^1.2.0",
     "hexo-generator-tag": "^0.2.0",
-    "hexo-incremental-id": "^0.1.2",
     "hexo-renderer-ejs": "^0.3.0",
     "hexo-renderer-jade": "0.3.0",
     "hexo-renderer-marked": "^0.3.0",
