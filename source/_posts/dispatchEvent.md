@@ -42,7 +42,7 @@ var fireEvent = function fireEvent(element,event){
 
 * 早期的创建事件的方式：
 ```js
-var event = document.createEvent('Event'); // 一个参数， 表示事件类型
+var event = document.createEvent('Event'); // 一个参数， 表示事件类型
 event.initEvent('build', true, true); // 三个参数，eventName事件类型、canBubble是否冒泡、preventDefault是否阻止事件的默认操作
 document.dispatchEvent(event) // 参数为事件对象
 ```
@@ -74,12 +74,12 @@ function handler(e) {
 }
 document.addEventListener('haha', handler, false)
 function disPatchEvt(obj) {
-	evt.eventBody = obj
-	document.dispatchEvent(evt, obj)
+  evt.eventBody = obj
+  document.dispatchEvent(evt, obj)
 }
 disPatchEvt(obj)
 ```
-以上例子中所传的数据可以是任任意类型的数据，通过这种方法基本可以满足任意标准浏览器环境下通过自定义事件的需求。
+以上例子中所传的数据可以是任任意类型的数据，通过这种方法基本可以满足任意标准浏览器环境下通过自定义事件的需求。
 
 [事件]:http://mhynet.cn/2017/09/04/%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E7%A8%8B%E5%BA%8F/
 [www.runoob.com]:http://www.runoob.com/jsref/dom-obj-event.html
