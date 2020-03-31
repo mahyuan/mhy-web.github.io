@@ -1,14 +1,13 @@
 ---
-title: CSS3动画--转不停的骰子
+title: CSS3 transform制作骰子
 date: 2017-11-16 20:26:37
 category: 前端
 tags:
   - css
-  - 动画
   - transform
-description: "css旋转动画，转不停的骰子"
+description: "css transform, Rotate Cube"
 ---
-- [最终效果](https://h5.mhynet.cn/3D_transform/index.html)
+- [最终效果](https://h5.mhynet.cn/css/transform3d.html)
 
 ### 1.建立容器和6个面:
 
@@ -41,8 +40,8 @@ description: "css旋转动画，转不停的骰子"
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden;
-    transform: translateZ(100px) rotateY(45deg) rotateZ(45deg) rotateX(90deg);
+    backface-visibility: visible;
+    transform: translateZ(-100px) rotateY(0deg) rotateX(90deg);
 }
 .box{
     display: block;
