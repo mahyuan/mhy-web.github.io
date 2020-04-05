@@ -174,6 +174,7 @@ theme_config:
     # (without hexo-leancloud-counter-security plugin), set `security` to `false`.
     security: false
     betterPerformance: false
+    listShowCount: false # 首页列表是否显示阅读量
   # Valine
   # For more information: https://valine.js.org, https://github.com/xCss/Valine
   valine:

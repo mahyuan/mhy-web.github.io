@@ -22,7 +22,12 @@ and the repository exists.
 ```
 当时想过把端口改回22，但是强迫症的我想了想还是决定再试试。网上搜了相关的问题，都是让配置`~/.ssh/config`端口的，于是就在segmengfault上提了一个问题[git ssh的端口怎么改](https://segmentfault.com/q/1010000022185111?_ea=36062928)，有位热心朋友提示还是得改remote url，但是我的改动不对，一定有什么是我不知道的。 于是，我找到了git官方文档，一切谜题都迎刃而解。
 
-git url有很多种格式，但是大部分人只知道最常用的两种，分别为`user@host.xz:path/to/repo.git`和`http[s]://host.xz[:port]/path/to/repo.git/`。上面提到的两种格式中第二种使用`http`或`https`协议传输，常见于分享的github仓库地址，不需要身份验证；第二种是常用的ssh链接，需要有仓库的权限，其实这种格式是一种标准格式的简写。
+git url有很多种格式，但是大部分人只知道最常用的两种，分别为:
+
+- ` user@host.xz:path/to/repo.git `
+- ` http[s]://host.xz[:port]/path/to/repo.git/ `
+
+上面提到的两种格式中第二种使用`http`或`https`协议传输，常见于分享的github仓库地址，不需要身份验证；第二种是常用的ssh链接，需要有仓库的权限，其实这种格式是一种标准格式的简写。
 
 ## git url标准格式
 官方文档中列出的标准的格式一共有以下四种：
