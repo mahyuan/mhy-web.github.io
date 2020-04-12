@@ -1,9 +1,9 @@
 ---
 title: vps搭建指南
-category: vps
+category: 工具链
 tags:
   - vps
-date: 2019-09-23 16:00:56
+date: 2019-09-23
 description: "vps搭建指南，实现科学上网"
 ---
 
