@@ -17,14 +17,14 @@ tags:
 
 ## 下载安装包
 在[python官网](https://www.python.org/downloads/ "python3下载")进入下载页面，在这里选择你需要的版本，这里以`Python 3.7.0`为例，点击download会跳转到所选版本的详情页。
-<img src="https://image.mhynet.cn/blog-python3_release_1.png" style="width:400px">
+<img src="https://image.mhynet.cn/blog-python3_release_1.png" width=400 alt="package list">
 
 在最下面的表格Files中选择*Gzipped source tarball*下载源码包。
-<img src="https://image.mhynet.cn/blog-python3_release2.png" style="width:400px">
+<img src="https://image.mhynet.cn/blog-python3_release2.png" width=400 alt="gzip files">
 
 也可以直接去官方的[ftp](https://www.python.org/ftp/python/3.7.0/)列表页面去下载，一般下载所需版本的.tgz包就可以了。
 
-<img src="https://image.mhynet.cn/blog-python3_release3.png" style="width:400px">
+<img src="https://image.mhynet.cn/blog-python3_release3.png" width=400 alt="packages">
 
 如果服务器的网速不佳，可以使用浏览器下载完之后使用scp上传服务器，或者复制安装包链接，使用curl或wget等直接下载到服务器上。
 
