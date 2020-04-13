@@ -54,7 +54,7 @@ systemctl --failed
 systemctl kill nginx
 systemctl status nginx
 ```
-更多更详细的使用方式，可以阅读[linux.cn]官方文档。
+更多更详细的使用方式，可以阅读[官方文档](linux.cn)。
 
 [systemctl 命令完全指南](https://linux.cn/article-5926-1.html)
 [systemctl命令](https://man.linuxde.net/systemctl)
