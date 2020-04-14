@@ -1,11 +1,11 @@
 ---
-title: linux学习笔记(4)
+title: linux学习笔记之用户和用户组管理
 category: 后端
 tags:
 	- linux
 	- bash
 date: 2018-09-22 18:15:31
-description: "linux学习笔记之用户和用户组管理。"
+description: linux学习笔记之用户和用户组管理
 ---
 
 这里记录下linux系统下用户和用户组的管理方面的学习笔记。
