@@ -1,11 +1,11 @@
 ---
-title: linux学习笔记(1)
+title: linux学习笔记之权限管理
 category: 后端
 tags:
 	- linux
 	- bash
 date: 2018-08-16 12:25:59
-description: "linux 学习笔记之权限管理。"
+description: linux 学习笔记之权限管理
 ---
 
 最近给家里的PC的虚拟机上搭建开发环境，经常用到文件或目录权限的问题， 发现对这一块的了解还不够，所以抽时间恶补了一下，这里记录一下。
