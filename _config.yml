@@ -214,3 +214,8 @@ theme_config:
     on: false
     data_uid: MTAyMC8zNDM1OS8xMDg5Ng== ## 来必力(data_uid)
   # end of yelee
+  # https://www.google.com/adsense/start/
+  adsense:
+    enable: true
+    client_id: ca-pub-8157959863315850
+    src: //pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
